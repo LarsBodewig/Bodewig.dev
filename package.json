@@ -1,0 +1,15 @@
+{
+    "name": "bodewig.dev",
+    "description": "Website",
+    "authors": "LarsBodewig",
+    "version": "1.0.0",
+    "devDependencies": {
+        "@11ty/eleventy": "^1.0.1"
+    },
+    "private": true,
+    "license": "private",
+    "scripts": {
+        "build": "eleventy",
+        "serve": "eleventy --serve"
+    }
+}

@@ -1,6 +1,13 @@
 {
     "editor.formatOnSave": true,
-    "html.format.endWithNewline": true,
     "html.format.indentInnerHtml": true,
-    "html.format.extraLiners": "body, main, footer"
+    "html.format.extraLiners": "body, main, footer",
+    "files.associations": {
+        "*.liquid": "html"
+    },
+    "files.exclude": {
+        "node_modules": true
+    },
+    "files.insertFinalNewline": true,
+    "prettier.tabWidth": 4,
 }
