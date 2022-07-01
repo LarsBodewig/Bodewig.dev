@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "devDependencies": {
         "@11ty/eleventy": "^1.0.1",
+        "@prettier/plugin-xml": "^2.2.0",
         "prettier": "^2.7.1"
     },
     "private": true,

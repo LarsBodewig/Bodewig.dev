@@ -20,15 +20,14 @@ module.exports = function (eleventyConfig) {
         const path = eleventyConfig.getFilter("url")(url);
         return host + path;
     });
-    eleventyConfig.addTransform("prettier", (content, outputPath) =>
-        prettier.format(
-            content,
-            {
-                tabWidth: 4,
-                xmlWhitespaceSensitivity: "ignore",
-                filepath: outputPath
-            }
-        ));
+    eleventyConfig.addTransform("prettier", (content, outputPath) => {
+        const xml = content.trim(); // prettier fails on leading newline
+        return prettier.format(xml, {
+            tabWidth: 4,
+            xmlWhitespaceSensitivity: "ignore",
+            filepath: outputPath,
+        });
+    });
 
     return {
         dir: {
