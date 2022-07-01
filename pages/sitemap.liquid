@@ -2,11 +2,12 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-{%- for post in collections.all -%}
+    {%- for post in collections.all -%}
     <url>
         <loc>{% absoluteUrl post.url globals %}</loc>
     </url>
-{%- endfor -%}
+    {%- endfor -%}
 </urlset>
