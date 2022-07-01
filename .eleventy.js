@@ -11,9 +11,14 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addCollection("nav", collectionSortTitle);
     eleventyConfig.addCollection("footer", collectionSortTitle);
-    eleventyConfig.addLiquidShortcode("titleOf", (page, collection) => {
-        const colPage = collection.find(elem => elem.url === page.url);
+    eleventyConfig.addShortcode("titleOf", (page, collection) => {
+        const colPage = collection.find((elem) => elem.url === page.url);
         return colPage.data.title;
+    });
+    eleventyConfig.addShortcode("absoluteUrl", (url, globals) => {
+        const host = globals.protocol + "://" + globals.domain.toLowerCase();
+        const path = eleventyConfig.getFilter("url")(url);
+        return host + path;
     });
     eleventyConfig.addTransform("prettier", (content, outputPath) =>
         prettier.format(
