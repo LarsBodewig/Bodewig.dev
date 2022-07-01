@@ -1,6 +1,16 @@
 {
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "editor.formatOnSave": true,
-    "html.format.endWithNewline": true,
-    "html.format.indentInnerHtml": true,
-    "html.format.extraLiners": "body, main, footer"
+    "prettier.tabWidth": 4,
 }
