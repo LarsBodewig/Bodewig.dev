@@ -10,6 +10,7 @@ function collectionSortTitle(collectionApi) {
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addCollection("nav", collectionSortTitle);
+    eleventyConfig.addCollection("footer", collectionSortTitle);
     eleventyConfig.addLiquidShortcode("titleOf", (page, collection) => {
         const colPage = collection.find(elem => elem.url === page.url);
         return colPage.data.title;
