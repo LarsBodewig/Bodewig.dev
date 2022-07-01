@@ -12,5 +12,8 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "editor.formatOnSave": true,
+    "files.associations": {
+        "*.liquid": "html"
+    },
     "prettier.tabWidth": 4,
 }

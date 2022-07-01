@@ -5,5 +5,6 @@ module.exports = function (eleventyConfig) {
       input: "pages",
       output: "build",
     },
+    pathPrefix: "/",
   };
 };
