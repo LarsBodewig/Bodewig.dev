@@ -1,7 +1,17 @@
 {
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "editor.formatOnSave": true,
-    "html.format.indentInnerHtml": true,
-    "html.format.extraLiners": "body, main, footer",
     "files.associations": {
         "*.liquid": "html"
     },
@@ -9,5 +19,5 @@
         "node_modules": true
     },
     "files.insertFinalNewline": true,
-    "prettier.tabWidth": 4,
+    "prettier.tabWidth": 4
 }
