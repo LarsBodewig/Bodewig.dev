@@ -4,7 +4,8 @@
     "authors": "LarsBodewig",
     "version": "1.0.0",
     "devDependencies": {
-        "@11ty/eleventy": "^1.0.1"
+        "@11ty/eleventy": "^1.0.1",
+        "prettier": "^2.7.1"
     },
     "private": true,
     "license": "private",
