@@ -7,7 +7,22 @@ function collectionSortTitle(collectionApi) {
     return ordered;
 }
 
+const suffixPaths = false;
+
 module.exports = function (eleventyConfig) {
+    if (suffixPaths) {
+        const oldUrlFilter = eleventyConfig.getFilter("url");
+        eleventyConfig.addFilter("url", (url) => {
+            const path = oldUrlFilter(url);
+            if (path.endsWith("/")) {
+                if (path.length > 1) {
+                    return path.substring(0, path.length - 1);
+                }
+            }
+            return path;
+        });
+    }
+
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addCollection("nav", collectionSortTitle);
     eleventyConfig.addCollection("footer", collectionSortTitle);
