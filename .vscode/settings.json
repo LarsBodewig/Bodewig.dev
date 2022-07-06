@@ -9,7 +9,8 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "files.insertFinalNewline": true
     },
     "editor.formatOnSave": true,
     "files.associations": {
