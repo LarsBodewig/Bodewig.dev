@@ -1,5 +1,6 @@
 ---
-title: Junique.dev
+eleventyComputed:
+    title: "{{ globals.domain }}"
 ---
 
 <!DOCTYPE html>
@@ -8,7 +9,7 @@ title: Junique.dev
 
     <body>
         <header>
-            <h1>Junique.dev</h1>
+            <h1>{{ title }}</h1>
         </header>
 
         <main></main>
