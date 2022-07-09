@@ -14,6 +14,7 @@
     },
     "editor.formatOnSave": true,
     "files.associations": {
+        "*.txt.liquid": "plaintext",
         "*.liquid": "html"
     },
     "files.exclude": {

@@ -30,16 +30,15 @@ module.exports = function (eleventyConfig) {
         ...config.liquid,
         operators: {
             ...liquidjs.defaultOperators,
-            'in': (a, b) => b.includes(a)
+            'inCol': (elem, collection) =>
+                collection.some(item => item.url === elem.url),
+            'from': (elem, collection) =>
+                collection.find(item => item.url === elem.url),
         }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
     eleventyConfig.addCollection("nav", collectionSortTitle);
     eleventyConfig.addCollection("footer", collectionSortTitle);
-    eleventyConfig.addShortcode("titleOf", (page, collection) => {
-        const colPage = collection.find((elem) => elem.url === page.url);
-        return colPage.data.title;
-    });
     eleventyConfig.addFilter("absoluteUrl", (url) => {
         const host = config.server.protocol
             + "://"
@@ -60,7 +59,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
         const excluded = nanomatch(outputPath, config.prettierExclude);
         if (excluded.length) { // empty if outputPath is not excluded
-            return content;
+            return content.trimStart();
         }
         const text = content.trim(); // prettier fails on leading newline
         return prettier.format(text, {

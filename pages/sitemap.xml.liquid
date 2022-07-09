@@ -1,12 +1,12 @@
 ---
 permalink: /sitemap.xml
-tags: sitemap_exclude
+tags: noindex
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-    {%- for site in collections.all -%} {%- unless site in
-    collections.sitemap_exclude -%}
+    {%- for site in collections.all -%} {%- unless site inCol
+    collections.noindex -%}
     <url>
         <loc>{{ site.url | absoluteUrl }}</loc>
     </url>
