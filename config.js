@@ -17,6 +17,9 @@ module.exports = {
         tabWidth: 4,
         xmlWhitespaceSensitivity: "ignore"
     },
+    prettierExclude: [
+        "**/*.txt"
+    ],
     server: {
         domain: "Bodewig.dev",
         protocol: "https",

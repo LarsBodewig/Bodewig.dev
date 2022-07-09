@@ -6,6 +6,7 @@
     "devDependencies": {
         "@11ty/eleventy": "^1.0.1",
         "@prettier/plugin-xml": "^2.2.0",
+        "nanomatch": "^1.2.13",
         "prettier": "^2.7.1"
     },
     "private": true,

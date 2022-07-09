@@ -1,6 +1,7 @@
 const config = require("./config");
 const prettier = require("prettier");
 const liquidjs = require('liquidjs');
+const nanomatch = require("nanomatch");
 
 function collectionSortTitle(collectionApi) {
     const collection = collectionApi.getAll();
@@ -46,13 +47,23 @@ module.exports = function (eleventyConfig) {
         const path = eleventyConfig.getFilter("url")(url);
         return host + path;
     });
+    eleventyConfig.addFilter("absoluteUrlNoPrefix", (url) => {
+        const host = config.server.protocol
+            + "://"
+            + config.server.domain.toLowerCase();
+        return host + "/" + url;
+    });
     eleventyConfig.addFilter("log", (value) => {
         console.log(value);
         return value;
     });
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
-        const xml = content.trim(); // prettier fails on leading newline
-        return prettier.format(xml, {
+        const excluded = nanomatch(outputPath, config.prettierExclude);
+        if (excluded.length) { // empty if outputPath is not excluded
+            return content;
+        }
+        const text = content.trim(); // prettier fails on leading newline
+        return prettier.format(text, {
             ...config.prettier,
             filepath: outputPath,
         });
