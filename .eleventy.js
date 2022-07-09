@@ -37,8 +37,14 @@ module.exports = function (eleventyConfig) {
         }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
+    eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
     eleventyConfig.addCollection("nav", collectionSortTitle);
     eleventyConfig.addCollection("footer", collectionSortTitle);
+    eleventyConfig.addFilter("asset", (file) => {
+        const url = "/assets/" + file;
+        const path = eleventyConfig.getFilter("url")(url);
+        return path;
+    })
     eleventyConfig.addFilter("absoluteUrl", (url) => {
         const host = config.server.protocol
             + "://"

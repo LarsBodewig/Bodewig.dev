@@ -6,6 +6,7 @@ module.exports = {
         },
         pathPrefix: "/"
     },
+    favicon: "assets/icon.svg",
     liquid: {
         strictFilters: true,
         strictVariables: true
@@ -23,6 +24,6 @@ module.exports = {
     server: {
         domain: "Bodewig.dev",
         protocol: "https",
-        suffixPaths: false
+        suffixPaths: true
     }
 };
