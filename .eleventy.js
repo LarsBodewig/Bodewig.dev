@@ -29,10 +29,7 @@ module.exports = function (eleventyConfig) {
         ...config.liquid,
         operators: {
             ...liquidjs.defaultOperators,
-            'in': (a, b) => {
-                console.log(a + ' in ' + b);
-                return b.contains(a);
-            },
+            'in': (a, b) => b.includes(a)
         }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
