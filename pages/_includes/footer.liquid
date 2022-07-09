@@ -1,15 +1,18 @@
 <footer>
     <nav>
         <ul>
-            {% for item in collections.endnav %}
-            <li>
-                <a href="{{ item.url | url }}" 
-                    {% if page.url == item.url %} 
-                        aria-current="page"
-                    {% endif %}
-                >{{ item.data.title }}</a>
-            </li>
-            {% endfor %}
+            {%- for item in collections.endnav -%}
+                <li>
+                    <a
+                        href="{{ item.url | url }}"
+                        {%- if page.url == item.url -%}
+                            aria-current="page"
+                        {%- endif -%}
+                    >
+                        {{- item.data.title -}}
+                    </a>
+                </li>
+            {%- endfor -%}
         </ul>
     </nav>
 </footer>

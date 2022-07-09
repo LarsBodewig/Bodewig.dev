@@ -20,5 +20,6 @@
         "node_modules": true
     },
     "files.insertFinalNewline": true,
+    "html.format.contentUnformatted": "pre, ---",
     "prettier.tabWidth": 4
 }
