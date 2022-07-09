@@ -1,0 +1,19 @@
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.header {
+    background-color: #4c4ee3;
+    color: #fff;
+}
+
+.banner,
+.banner:active,
+.menu-item-link {
+    color: #fff;
+}
+
+.menu-item-link:visited {
+    color: #4ee34c;
+}

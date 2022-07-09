@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-family: Verdana, sans-serif;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.banner-icon {
+    height: 1.25rem;
+    margin: 0 0.5rem;
+}
+
+.banner-text {
+    font-size: 1.5rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.heading {
+    margin: 0 3rem;
+    font-weight: normal;
+}
+
+.topnav {
+    margin-left: auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu-item {
+    margin-right: 2rem;
+}

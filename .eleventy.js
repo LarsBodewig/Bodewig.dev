@@ -38,24 +38,20 @@ module.exports = function (eleventyConfig) {
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
     eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
-    eleventyConfig.addCollection("nav", collectionSortTitle);
-    eleventyConfig.addCollection("footer", collectionSortTitle);
+    eleventyConfig.addCollection("topnav", collectionSortTitle);
+    eleventyConfig.addCollection("endnav", collectionSortTitle);
     eleventyConfig.addFilter("asset", (file) => {
         const url = "/assets/" + file;
         const path = eleventyConfig.getFilter("url")(url);
         return path;
     })
     eleventyConfig.addFilter("absoluteUrl", (url) => {
-        const host = config.server.protocol
-            + "://"
-            + config.server.domain.toLowerCase();
+        const host = config.server.protocol + "://" + config.server.domain;
         const path = eleventyConfig.getFilter("url")(url);
         return host + path;
     });
     eleventyConfig.addFilter("absoluteUrlNoPrefix", (url) => {
-        const host = config.server.protocol
-            + "://"
-            + config.server.domain.toLowerCase();
+        const host = config.server.protocol + "://" + config.server.domain;
         return host + "/" + url;
     });
     eleventyConfig.addFilter("log", (value) => {

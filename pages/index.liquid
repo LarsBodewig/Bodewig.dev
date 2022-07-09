@@ -1,6 +1,6 @@
 ---
 eleventyComputed:
-    title: "{{ server.domain }}"
+    title: "{{ site.title }}"
 ---
 
 <!DOCTYPE html>
@@ -8,9 +8,7 @@ eleventyComputed:
     {% include 'head' %}
 
     <body>
-        <header>
-            <h1>{{ title }}</h1>
-        </header>
+        {% include 'header' %}
 
         <main></main>
 

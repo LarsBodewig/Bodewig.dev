@@ -22,8 +22,11 @@ module.exports = {
         "**/*.txt"
     ],
     server: {
-        domain: "Bodewig.dev",
+        domain: "bodewig.dev",
         protocol: "https",
         suffixPaths: true
+    },
+    site: {
+        title: "Bodewig.dev"
     }
 };

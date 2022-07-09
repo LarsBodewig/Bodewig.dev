@@ -1,0 +1,18 @@
+body {
+    background-color: #181818;
+    color: #fff;
+}
+
+.header {
+    background-color: #3c2360;
+}
+
+.banner,
+.banner:active,
+.menu-item-link {
+    color: #fff;
+}
+
+.menu-item-link:visited {
+    color: #6c9235;
+}
