@@ -1,20 +1,7 @@
-body {
-    background-color: #fff;
-    color: #000;
-}
-
-.header,
-.footer {
-    background-color: #4c4ee3;
-    color: #fff;
-}
-
-.banner,
-.banner:active,
-.menu-item-link {
-    color: #fff;
-}
-
-.menu-item-link:visited {
-    color: #4ee34c;
+:root {
+    --main-bg-color: #000;
+    --main-text-color: #fff;
+    --prime-bg-color: #4c4ee3;
+    --prime-text-color: #000;
+    --contrast-text-color: #4ee34c;
 }

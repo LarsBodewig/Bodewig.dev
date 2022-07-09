@@ -1,19 +1,7 @@
-body {
-    background-color: #181818;
-    color: #fff;
-}
-
-.header,
-.footer {
-    background-color: #3c2360;
-}
-
-.banner,
-.banner:active,
-.menu-item-link {
-    color: #fff;
-}
-
-.menu-item-link:visited {
-    color: #6c9235;
+:root {
+    --main-bg-color: #181818;
+    --main-text-color: #fff;
+    --prime-bg-color: #3c2360;
+    --prime-text-color: #fff;
+    --contrast-text-color: #6c9235;
 }

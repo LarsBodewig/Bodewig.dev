@@ -1,3 +1,8 @@
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
 .header {
     position: sticky;
     top: 0.5rem;
@@ -12,11 +17,23 @@
     font-family: Verdana, sans-serif;
 }
 
+.header,
+.footer {
+    background-color: var(--prime-bg-color);
+    color: var(--prime-text-color);
+}
+
 .banner {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+}
+
+.banner,
+.banner:active,
+.menu-item-link {
+    color: var(--prime-text-color);
 }
 
 .banner-icon {
@@ -47,4 +64,8 @@
 
 .menu-item {
     margin-right: 2rem;
+}
+
+.menu-item-link:visited {
+    color: var(--contrast-text-color);
 }
