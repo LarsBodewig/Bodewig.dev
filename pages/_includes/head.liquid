@@ -7,9 +7,9 @@
     {% if page inCol collections.noindex -%}
     <meta name="robots" content="noindex,noarchive" />
     {%- endif -%}
-    <link rel="stylesheet" href="{{ 'index.css' | asset }}" />
+    <link rel="stylesheet" href="{{ 'bundle.css' | asset }}" />
     {% unless page inCol collections.noindex -%}
     <link rel="canonical" href="{{ page.url | url }}" />
     {%- endunless -%}
-    <link rel="icon" href="{{ 'favicon.svg' | url }}" />
+    <link rel="icon" href="{{ '/favicon.svg' | url }}" />
 </head>

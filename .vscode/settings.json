@@ -21,6 +21,7 @@
         "node_modules": true
     },
     "files.insertFinalNewline": true,
+    "html.autoCreateQuotes": false,
     "html.format.contentUnformatted": "pre, ---",
     "prettier.tabWidth": 4
 }

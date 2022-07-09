@@ -1,4 +1,10 @@
 .header {
+    position: sticky;
+    top: 0.5rem;
+}
+
+.header,
+.footer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,7 +34,8 @@
     font-weight: normal;
 }
 
-.topnav {
+.topnav,
+.endnav {
     margin-left: auto;
 }
 

@@ -3,7 +3,8 @@ body {
     color: #fff;
 }
 
-.header {
+.header,
+.footer {
     background-color: #3c2360;
 }
 

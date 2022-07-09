@@ -1,9 +1,10 @@
-<footer>
-    <nav>
-        <ul>
+<footer class="footer">
+    <nav class="endnav">
+        <ul class="menu">
             {%- for item in collections.endnav -%}
-                <li>
+                <li class="menu-item">
                     <a
+                        class="menu-item-link"
                         href="{{ item.url | url }}"
                         {%- if page.url == item.url -%}
                             aria-current="page"
