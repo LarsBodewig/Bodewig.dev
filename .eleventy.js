@@ -1,5 +1,6 @@
 const config = require("./config");
 const prettier = require("prettier");
+const liquidjs = require('liquidjs');
 
 function collectionSortTitle(collectionApi) {
     const collection = collectionApi.getAll();
@@ -24,6 +25,16 @@ module.exports = function (eleventyConfig) {
             return path;
         });
     }
+    eleventyConfig.setLiquidOptions({
+        ...config.liquid,
+        operators: {
+            ...liquidjs.defaultOperators,
+            'in': (a, b) => {
+                console.log(a + ' in ' + b);
+                return b.contains(a);
+            },
+        }
+    });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
     eleventyConfig.addCollection("nav", collectionSortTitle);
     eleventyConfig.addCollection("footer", collectionSortTitle);
@@ -37,6 +48,10 @@ module.exports = function (eleventyConfig) {
             + config.server.domain.toLowerCase();
         const path = eleventyConfig.getFilter("url")(url);
         return host + path;
+    });
+    eleventyConfig.addFilter("log", (value) => {
+        console.log(value);
+        return value;
     });
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
         const xml = content.trim(); // prettier fails on leading newline

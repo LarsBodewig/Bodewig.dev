@@ -6,6 +6,10 @@ module.exports = {
         },
         pathPrefix: "/"
     },
+    liquid: {
+        strictFilters: true,
+        strictVariables: true
+    },
     passthrough: [
         "assets"
     ],
