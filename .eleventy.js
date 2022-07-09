@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
         ...config.liquid,
         operators: {
             ...liquidjs.defaultOperators,
+            '+': (a, b) => a + b,
             'inCol': (elem, collection) =>
                 collection.some(item => item.url === elem.url),
             'from': (elem, collection) =>
