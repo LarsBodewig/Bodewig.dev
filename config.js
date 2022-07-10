@@ -1,4 +1,5 @@
 module.exports = {
+    defaultLanguage: "de",
     eleventy: {
         dir: {
             input: "pages",
