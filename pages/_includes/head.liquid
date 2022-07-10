@@ -8,7 +8,7 @@
     <meta name="robots" content="noindex,noarchive" />
     {%- endif -%}
     <link rel="stylesheet" href="{{ 'bundle.css' | asset }}" />
-    {% assign pageCss = page.filePathStem + '.css' -%}
+    {% assign pageCss = colPage.data.id + '.css' -%}
     <link rel="stylesheet" href="{{ pageCss | asset }}" />
     {% unless page inCol collections.noindex -%}
     <link rel="canonical" href="{{ page.url | url }}" />

@@ -1,18 +1,21 @@
 <footer class="footer">
     <nav class="endnav">
         <ul class="menu">
+            {%- assign colPage = page from collections.all -%}
             {%- for item in collections.endnav -%}
-                <li class="menu-item">
-                    <a
-                        class="menu-item-link"
-                        href="{{ item.url | url }}"
-                        {%- if page.url == item.url -%}
-                            aria-current="page"
-                        {%- endif -%}
-                    >
-                        {{- item.data.title -}}
-                    </a>
-                </li>
+                {%- if item.data.lang == colPage.data.lang -%}
+                    <li class="menu-item">
+                        <a
+                            class="menu-item-link"
+                            href="{{ item.url | url }}"
+                            {%- if page.url == item.url -%}
+                                aria-current="page"
+                            {%- endif -%}
+                        >
+                            {{- item.data.title -}}
+                        </a>
+                    </li>
+                {%- endif -%}
             {%- endfor -%}
         </ul>
     </nav>
