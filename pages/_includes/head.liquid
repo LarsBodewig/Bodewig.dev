@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="{{ pageCss | asset }}" />
     {% unless page inCol collections.noindex -%}
     <link rel="canonical" href="{{ page.url | url }}" />
-    {%- endunless -%}
+    {%- assign localized = collections.all | where: "data.id", colPage.data.id
+    -%} {%- for item in localized -%}
+    <link
+        rel="alternate"
+        hreflang="{{ item.data.lang }}"
+        href="{{ item.url | absoluteUrl }}"
+    />
+    {%- if item.data.lang == defaultLanguage -%}
+    <link
+        rel="alternate"
+        hreflang="x-default"
+        href="{{ item.url | absoluteUrl }}"
+    />
+    {%- endif -%} {%- endfor -%} {%- endunless -%}
     <link rel="icon" href="{{ '/favicon.svg' | url }}" />
 </head>
