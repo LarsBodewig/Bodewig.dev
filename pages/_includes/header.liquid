@@ -1,5 +1,12 @@
 <header class="header">
-    <a class="banner" href="{{ '/' | url }}">
+    {%- assign indexUrl = '/' | url -%}
+    <a 
+        class="banner"
+        href="{{ indexUrl }}" 
+        {%- if page.url == indexUrl -%}
+            aria-current="page"
+        {%- endif -%}
+    >
         <img 
             class="banner-icon" 
             src="{{ 'icon.svg' | asset }}" 
@@ -13,17 +20,19 @@
     <nav class="topnav">
         <ul class="menu">
             {%- for item in collections.topnav -%}
-                <li class="menu-item">
-                    <a 
-                        class="menu-item-link"
-                        href="{{ item.url | url }}"
-                        {%- if page.url == item.url -%}
-                            aria-current="page"
-                        {%- endif -%}
-                    >
-                        {{- item.data.title -}}
-                    </a>
-                </li>
+                {%- if item.data.lang == colPage.data.lang -%}
+                    <li class="menu-item">
+                        <a 
+                            class="menu-item-link"
+                            href="{{ item.url | url }}"
+                            {%- if page.url == item.url -%}
+                                aria-current="page"
+                            {%- endif -%}
+                        >
+                            {{- item.data.title -}}
+                        </a>
+                    </li>
+                {%- endif -%}
             {%- endfor -%}
         </ul>
     </nav>
