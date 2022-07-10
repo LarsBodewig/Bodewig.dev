@@ -2,7 +2,8 @@
     <nav class="endnav">
         <ul class="menu">
             {%- assign colPage = page from collections.all -%}
-            {%- for item in collections.all | where "lang", colPage.data.lang -%}
+            {%- assign localized = collections.endnav | where: "data.lang", colPage.data.lang -%}
+            {%- for item in localized -%}
                     <li class="menu-item">
                         <a
                             class="menu-item-link"
