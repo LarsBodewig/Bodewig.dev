@@ -33,5 +33,18 @@
                     </li>
             {%- endfor -%}
         </ul>
+        <ul class="languages">
+            {%- assign localized = collections.all | where: "data.id", colPage.data.id -%}
+            {%- for item in localized -%}
+            {%- if item.data.lang != colPage.data.lang -%}
+            <li class="language-item">
+                <a 
+                    class="language-item-link"
+                    href="{{ item.url | url }}"
+                >{{ item.data.lang }}</a>
+            </li>
+            {%- endif -%}
+            {%- endfor -%}
+        </ul>
     </nav>
 </header>
