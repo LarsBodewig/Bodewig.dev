@@ -11,7 +11,27 @@ lang: English
     <body>
         {% include 'header' %}
 
-        <main></main>
+        <main>
+            <p>This page lists some note-worthy projects I worked on.</p>
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TODO</td>
+                        <td>
+                            {% include 'badge', label: 'Java' %}
+                            {% include 'badge', label: 'JavaScript' %}
+                            {% include 'badge', label: 'C#' %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
 
         {% include 'footer' %}
     </body>

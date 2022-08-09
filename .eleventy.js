@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
         operators: {
             ...liquidjs.defaultOperators,
             '+': (a, b) => a + b,
+            'mod': (a, b) => a % b,
             'inCol': (elem, collection) =>
                 collection.some(item => item.url === elem.url),
             'from': (elem, collection) =>
@@ -58,6 +59,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("log", (value) => {
         console.log(value);
         return value;
+    });
+    eleventyConfig.addFilter("hash", (value) => {
+        let hash = 0;
+        for (let i = 0; i < value.length; i++) {
+            const char = value.charCodeAt(i);
+            hash = (hash << 5) - hash + char;
+            hash = hash & hash;
+        }
+        return hash;
     });
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
         const excluded = nanomatch(outputPath, config.prettierExclude);

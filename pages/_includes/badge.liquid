@@ -1,0 +1,10 @@
+{% comment %}
+    label: string;
+{% endcomment %}
+
+{%- assign hash = label | hash -%}
+{%- assign modulo = hash mod 4 -%}
+
+<div class="badge" style="background-color: var(--badge-bg-color-{{ modulo }})">
+    <span class="badge-text">{{ label }}</span>
+</div>

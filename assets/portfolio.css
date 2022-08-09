@@ -1,0 +1,15 @@
+.badge {
+    --badge-bg-color-0: red;
+    --badge-bg-color-1: green;
+    --badge-bg-color-2: darkorange;
+    --badge-bg-color-3: teal;
+}
+
+.badge {
+    border-radius: 0.7rem;
+    padding: 0 0.4rem 0.1rem;
+}
+
+.badge-text {
+    margin: auto;
+}
