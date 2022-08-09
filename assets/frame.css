@@ -1,11 +1,8 @@
-body {
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-}
-
 .header {
     position: sticky;
     top: 0.5rem;
+    flex-wrap: wrap;
+    row-gap: 1rem;
 }
 
 .header,
@@ -15,12 +12,9 @@ body {
     align-items: center;
     justify-content: start;
     font-family: var(--menu-font-family);
-}
-
-.header,
-.footer {
     background-color: var(--prime-bg-color);
     color: var(--prime-text-color);
+    padding: 0.75rem 0;
 }
 
 .banner {
@@ -43,11 +37,20 @@ body {
     margin: 0 0.5rem;
 }
 
+.banner-text {
+    border-bottom: 0.1rem solid;
+}
+
 .banner-text,
 .heading,
 .heading-divider {
     font-size: 1.5rem;
     font-family: var(--title-font-family);
+}
+
+.heading-container {
+    display: flex;
+    margin-left: 0.3rem;
 }
 
 .heading-divider {
@@ -56,6 +59,7 @@ body {
 
 .heading {
     font-weight: normal;
+    margin: 0;
 }
 
 .topnav,
@@ -81,9 +85,6 @@ body {
 
 .languages {
     border-left: 0.1rem solid;
-}
-
-.languages {
     border-left-color: var(--prime-text-color);
 }
 

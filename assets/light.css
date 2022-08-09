@@ -1,7 +1,7 @@
 :root {
-    --main-bg-color: #000;
-    --main-text-color: #fff;
+    --main-bg-color: #fff;
+    --main-text-color: #000;
     --prime-bg-color: #4c4ee3;
-    --prime-text-color: #000;
+    --prime-text-color: #fff;
     --contrast-text-color: #4ee34c;
 }

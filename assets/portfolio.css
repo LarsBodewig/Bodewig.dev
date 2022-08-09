@@ -1,3 +1,13 @@
+.portfolio-table {
+    border-collapse: collapse;
+}
+
+.portfolio-table th,
+.portfolio-table td {
+    border: 0.1rem solid var(--main-text-color);
+    padding: 0.5rem;
+}
+
 .badge {
     --badge-bg-color-0: red;
     --badge-bg-color-1: green;
@@ -6,6 +16,7 @@
 }
 
 .badge {
+    display: inline-block;
     border-radius: 0.7rem;
     padding: 0 0.4rem 0.1rem;
 }
