@@ -4,17 +4,17 @@
             {%- assign colPage = page from collections.all -%}
             {%- assign localized = collections.endnav | where: "data.lang", colPage.data.lang -%}
             {%- for item in localized -%}
-                    <li class="menu-item">
-                        <a
-                            class="menu-item-link"
-                            href="{{ item.url | url }}"
-                            {%- if page.url == item.url -%}
-                                aria-current="page"
-                            {%- endif -%}
-                        >
-                            {{- item.data.title -}}
-                        </a>
-                    </li>
+                <li class="menu-item">
+                    <a
+                        class="menu-item-link"
+                        href="{{ item.url | url }}"
+                        {%- if page.url == item.url -%}
+                            aria-current="page"
+                        {%- endif -%}
+                    >
+                        {{- item.data.title -}}
+                    </a>
+                </li>
             {%- endfor -%}
         </ul>
     </nav>

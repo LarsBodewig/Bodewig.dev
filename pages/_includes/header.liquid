@@ -1,18 +1,18 @@
 <header class="header">
     {%- assign indexUrl = '/' | url -%}
-    <a 
+    <a
         class="banner"
-        href="{{ indexUrl }}" 
+        href="{{ indexUrl }}"
         {%- if page.url == indexUrl -%}
             aria-current="page"
         {%- endif -%}
     >
-        <img 
-            class="banner-icon" 
-            src="{{ 'icon.svg' | asset }}" 
-            alt="" 
+        <img
+            class="banner-icon"
+            src="{{ 'icon.svg' | asset }}"
+            alt=""
             aria-hidden="true"
-        />
+        >
         <span class="banner-text">{{ site.title }}</span>
     </a>
     <span class="heading-divider">></span>
@@ -22,30 +22,32 @@
         <ul class="menu">
             {%- assign topnav = collections.topnav | where: "data.lang", colPage.data.lang -%}
             {%- for item in topnav -%}
-                    <li class="menu-item">
-                        <a 
-                            class="menu-item-link"
-                            href="{{ item.url | url }}"
-                            {%- if page.url == item.url -%}
-                                aria-current="page"
-                            {%- endif -%}
-                        >
-                            {{- item.data.title -}}
-                        </a>
-                    </li>
+                <li class="menu-item">
+                    <a
+                        class="menu-item-link"
+                        href="{{ item.url | url }}"
+                        {%- if page.url == item.url -%}
+                            aria-current="page"
+                        {%- endif -%}
+                    >
+                        {{- item.data.title -}}
+                    </a>
+                </li>
             {%- endfor -%}
         </ul>
         <ul class="languages">
             {%- assign localized = collections.all | where: "data.id", colPage.data.id -%}
             {%- for item in localized -%}
-            {%- if item.data.lang != colPage.data.lang -%}
-            <li class="language-item">
-                <a 
-                    class="language-item-link"
-                    href="{{ item.url | url }}"
-                >{{ item.data.lang }}</a>
-            </li>
-            {%- endif -%}
+                {%- if item.data.lang != colPage.data.lang -%}
+                    <li class="language-item">
+                        <a
+                            class="language-item-link"
+                            href="{{ item.url | url }}"
+                        >
+                            {{- item.data.lang -}}
+                        </a>
+                    </li>
+                {%- endif -%}
             {%- endfor -%}
         </ul>
     </nav>

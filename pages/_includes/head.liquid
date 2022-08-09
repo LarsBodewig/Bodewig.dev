@@ -1,30 +1,32 @@
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {%- assign colPage = page from collections.all -%}
     <title>{{ colPage.data.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page inCol collections.noindex -%}
-    <meta name="robots" content="noindex,noarchive" />
+        <meta name="robots" content="noindex,noarchive">
     {%- endif -%}
-    <link rel="stylesheet" href="{{ 'bundle.css' | asset }}" />
+    <link rel="stylesheet" href="{{ 'bundle.css' | asset }}">
     {% assign pageCss = colPage.data.id + '.css' -%}
-    <link rel="stylesheet" href="{{ pageCss | asset }}" />
+    <link rel="stylesheet" href="{{ pageCss | asset }}">
     {% unless page inCol collections.noindex -%}
-    <link rel="canonical" href="{{ page.url | url }}" />
-    {%- assign localized = collections.all | where: "data.id", colPage.data.id
-    -%} {%- for item in localized -%}
-    <link
-        rel="alternate"
-        hreflang="{{ item.data.lang }}"
-        href="{{ item.url | absoluteUrl }}"
-    />
-    {%- if item.data.lang == defaultLanguage -%}
-    <link
-        rel="alternate"
-        hreflang="x-default"
-        href="{{ item.url | absoluteUrl }}"
-    />
-    {%- endif -%} {%- endfor -%} {%- endunless -%}
-    <link rel="icon" href="{{ '/favicon.svg' | url }}" />
+        <link rel="canonical" href="{{ page.url | url }}">
+        {%- assign localized = collections.all | where: "data.id", colPage.data.id -%}
+        {%- for item in localized -%}
+            <link
+                rel="alternate"
+                hreflang="{{ item.data.lang }}"
+                href="{{ item.url | absoluteUrl }}"
+            >
+            {%- if item.data.lang == defaultLanguage -%}
+                <link
+                    rel="alternate"
+                    hreflang="x-default"
+                    href="{{ item.url | absoluteUrl }}"
+                >
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endunless -%}
+    <link rel="icon" href="{{ '/favicon.svg' | url }}">
 </head>
