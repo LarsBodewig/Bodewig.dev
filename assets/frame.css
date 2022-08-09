@@ -14,7 +14,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    font-family: Verdana, sans-serif;
+    font-family: var(--menu-font-family);
 }
 
 .header,
@@ -43,13 +43,18 @@ body {
     margin: 0 0.5rem;
 }
 
-.banner-text {
+.banner-text,
+.heading,
+.heading-divider {
     font-size: 1.5rem;
-    font-family: "Courier New", Courier, monospace;
+    font-family: var(--title-font-family);
+}
+
+.heading-divider {
+    margin: 0 0.5rem;
 }
 
 .heading {
-    margin: 0 3rem;
     font-weight: normal;
 }
 
