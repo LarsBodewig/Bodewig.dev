@@ -19,7 +19,8 @@
     <h1 class="heading">{{ colPage.data.title }}</h1>
     <nav class="topnav">
         <ul class="menu">
-            {%- for item in collections.topnav | where: "lang", colPage.data.lang -%}
+            {%- assign topnav = collections.topnav | where: "data.lang", colPage.data.lang -%}
+            {%- for item in topnav -%}
                     <li class="menu-item">
                         <a 
                             class="menu-item-link"
