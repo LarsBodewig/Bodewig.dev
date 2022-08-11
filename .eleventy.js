@@ -39,7 +39,9 @@ module.exports = function (eleventyConfig) {
         }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
-    eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
+    if (config.favicon) {
+        eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
+    }
     // eleventyConfig.addCollection("topnav", collectionSortTitle);
     // eleventyConfig.addCollection("endnav", collectionSortTitle);
     eleventyConfig.addFilter("asset", (file) => {
