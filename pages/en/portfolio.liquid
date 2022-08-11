@@ -22,11 +22,26 @@ lang: English
                 </thead>
                 <tbody>
                     <tr>
-                        <td>TODO</td>
                         <td>
-                            {% include 'badge', label: 'Java' %}
-                            {% include 'badge', label: 'JavaScript' %}
-                            {% include 'badge', label: 'C#' %}
+                            {% capture desc -%}
+                                Lorem ipsum dolor sit amet, consetetur
+                                sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt ut labore et dolore magna aliquyam
+                                erat, sed diam voluptua. At vero eos et accusam
+                                et justo duo dolores et ea rebum. Stet clita
+                                kasd gubergren, no sea takimata sanctus est
+                                Lorem ipsum dolor sit amet.
+                            {%- endcapture %}
+                            {% include 'project', name: 'WebShell' href: '/' description: desc %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Typescript' %}
+                                {% include 'badge', label: 'React' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'TSX' %}
+                                {% include 'badge', label: '*nix' %}
+                            </div>
                         </td>
                     </tr>
                 </tbody>
