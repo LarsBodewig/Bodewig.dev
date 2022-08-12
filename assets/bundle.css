@@ -14,3 +14,7 @@ body {
 main {
     margin: 2rem 1rem;
 }
+
+a:visited {
+    color: var(--contrast-text-color);
+}
