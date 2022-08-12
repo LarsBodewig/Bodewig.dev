@@ -1,3 +1,7 @@
+.portfolio-desc {
+    margin-bottom: 3rem;
+}
+
 .portfolio-table {
     border-collapse: collapse;
 }
@@ -17,7 +21,12 @@
 }
 
 .project-name {
-    display: block;
+    font-weight: bold;
+}
+
+.project-subtitle {
+    font-style: italic;
+    color: var(--passive-text-color);
 }
 
 .skill-badges {
@@ -28,13 +37,6 @@
 }
 
 .badge {
-    --badge-bg-color-0: red;
-    --badge-bg-color-1: green;
-    --badge-bg-color-2: darkorange;
-    --badge-bg-color-3: teal;
-}
-
-.badge {
     display: inline-block;
     border-radius: 0.7rem;
     padding: 0 0.4rem 0.1rem;
@@ -42,4 +44,5 @@
 
 .badge-text {
     margin: auto;
+    color: var(--prime-text-color);
 }

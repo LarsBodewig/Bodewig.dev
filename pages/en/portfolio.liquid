@@ -12,7 +12,22 @@ lang: English
         {% include 'header' %}
 
         <main>
-            <p>This page lists some note-worthy projects I worked on.</p>
+            <div class="portfolio-desc">
+                <p>
+                    This page lists some note-worthy projects I worked on,
+                    including professional and private projects. All my private
+                    projects are publicly available on
+                    <a href="https://github.com/LarsBodewig">Github</a>.
+                </p>
+                <p>
+                    Each listing features a selection of important languages,
+                    frameworks and tools as skills. Since projects can vary in
+                    complexity, technologies may depend on other technologies
+                    and tools can change over time, these selections are neither
+                    final nor complete. However they put an emphasis on the
+                    knowledge and experience gained from the respective project.
+                </p>
+            </div>
             <table class="portfolio-table">
                 <thead>
                     <tr>
@@ -24,15 +39,94 @@ lang: English
                     <tr>
                         <td>
                             {% capture desc -%}
-                                Lorem ipsum dolor sit amet, consetetur
-                                sadipscing elitr, sed diam nonumy eirmod tempor
-                                invidunt ut labore et dolore magna aliquyam
-                                erat, sed diam voluptua. At vero eos et accusam
-                                et justo duo dolores et ea rebum. Stet clita
-                                kasd gubergren, no sea takimata sanctus est
-                                Lorem ipsum dolor sit amet.
+                                2.5+ years full stack development of a public
+                                government website including data aggregation,
+                                transformation and visualization from multiple
+                                data sources and a comprehensive search
+                                function.
                             {%- endcapture %}
-                            {% include 'project', name: 'WebShell' href: '/' description: desc %}
+                            {%
+                                include 'project',
+                                name: 'Professional project'
+                                subtitle: ''
+                                href: ''
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'Typescript' %}
+                                {% include 'badge', label: 'Javascript' %}
+                                {% include 'badge', label: 'SQL' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'Maven' %}
+                                {% include 'badge', label: 'yarn' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                A static multi-page, multi-language website
+                                generated with 11ty, using liquid as templating
+                                language.
+                            {%- endcapture %}
+                            {%
+                                include 'project',
+                                name: 'Bodewig.dev'
+                                subtitle: '(Yes, the website you are currently reading!)'
+                                href: 'https://github.com/LarsBodewig/Bodewig.dev'
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Javascript' %}
+                                {% include 'badge', label: '11ty' %}
+                                {% include 'badge', label: 'liquid' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                A Java servlet filter to query JSON servlets
+                                using JsonPath, the equivalent of XPath for XML.
+                            {%- endcapture %}
+                            {%
+                                include 'project',
+                                name: 'JPath-Filter'
+                                subtitle: ''
+                                href: 'https://github.com/LarsBodewig/JPath-Filter'
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'Maven' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Website with bash look and feel to quickly
+                                simulate and assess simple *nix commands.
+                            {%- endcapture %}
+                            {%
+                                include 'project',
+                                name: 'Web-Shell'
+                                subtitle: '- A simulated bash running inside a browser'
+                                href: 'https://github.com/LarsBodewig/Web-Shell'
+                                description: desc
+                            %}
                         </td>
                         <td>
                             <div class="skill-badges">
@@ -40,7 +134,63 @@ lang: English
                                 {% include 'badge', label: 'React' %}
                                 {% include 'badge', label: 'Redux' %}
                                 {% include 'badge', label: 'TSX' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
                                 {% include 'badge', label: '*nix' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Visualization of Killed by Google, the Google
+                                graveyard; a free and open source list of
+                                discontinued Google services, products, devices,
+                                and apps.
+                            {%- endcapture %}
+                            {%
+                                include 'project',
+                                name: 'Visual-killedbygoogle'
+                                subtitle: ''
+                                href: 'https://github.com/LarsBodewig/Visual-killedbygoogle'
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Typescript' %}
+                                {% include 'badge', label: 'React' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'TSX' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Truth trees are a logical method to solve
+                                logical expressions by finding contradictions
+                                between terms. This is a CLI and GUI application
+                                parsing a logical expression as input, breaking
+                                in into terms, mapping out a truth tree and
+                                visualizing it.
+                            {%- endcapture %}
+                            {%
+                                include 'project',
+                                name: 'Bachelor thesis about implementing and visualizing truth trees'
+                                subtitle: ''
+                                href: 'https://github.com/LarsBodewig/HS-Bachelor'
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'ANTLR' %}
                             </div>
                         </td>
                     </tr>

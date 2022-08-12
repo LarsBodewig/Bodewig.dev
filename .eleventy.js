@@ -58,6 +58,23 @@ module.exports = function (eleventyConfig) {
         const host = config.server.protocol + "://" + config.server.domain;
         return host + "/" + url;
     });
+    eleventyConfig.addFilter("color", (value) => {
+        let h = 0;
+        const s = 100;
+        let l = 0;
+        for (let i = 0; i < value.length; i++) {
+            const code = value.charCodeAt(i);
+            h += code;
+            if (i % 2) l += code;
+        }
+        h = h % 360;
+        if (h > 40 && h < 200) {
+            l = l % 20 + 20;
+        } else {
+            l = l % 30 + 30;
+        }
+        return "hsl(" + h + ',' + s + '%,' + l + '%)';
+    });
     eleventyConfig.addFilter("log", (value) => {
         console.log(value);
         return value;

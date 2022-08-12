@@ -92,8 +92,3 @@
 .language-item {
     margin: 0 1rem;
 }
-
-.menu-item-link:visited,
-.language-item-link:visited {
-    color: var(--contrast-text-color);
-}
