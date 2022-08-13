@@ -1,4 +1,12 @@
 module.exports = {
+    contact: `
+        <p>
+            Lars Bodewig<br>
+            TODO<br>
+            TODO<br>
+            E-Mail:
+            <a href="mailto:info@bodewig.dev">info@bodewig.dev</a>
+        </p>`,
     defaultLanguage: "Deutsch",
     eleventy: {
         dir: {
