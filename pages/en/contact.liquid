@@ -11,7 +11,29 @@ lang: English
     <body>
         {% include 'header' %}
 
-        <main></main>
+        <main>
+            <p></p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/larsbodewig/"
+                        >LinkedIn/LarsBodewig</a
+                    >
+                </li>
+                <li>
+                    <a href="https://github.com/LarsBodewig"
+                        >GitHub/LarsBodewig</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="email"
+                        data-email="{{ 'Lars@Bodewig.dev' | encode }}"
+                        >Bitte aktivieren Sie JavaScript zum Anzeigen der
+                        E-Mail-Adresse</a
+                    >
+                </li>
+            </ul>
+        </main>
 
         {% include 'footer' %}
     </body>
