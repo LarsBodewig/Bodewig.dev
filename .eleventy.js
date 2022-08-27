@@ -58,6 +58,12 @@ module.exports = function (eleventyConfig) {
         const host = config.server.protocol + "://" + config.server.domain;
         return host + "/" + url;
     });
+    eleventyConfig.addFilter("encode", (value) => {
+        const encoded = value.split("")
+            .map(c => c.charCodeAt(0).toString(16).padStart(2, "0"))
+            .join("");
+        return encoded;
+    });
     eleventyConfig.addFilter("color", (value) => {
         let h = 0;
         const s = 100;

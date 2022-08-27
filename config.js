@@ -3,7 +3,7 @@ module.exports = {
         name: "Lars Bodewig",
         street: "TODO",
         city: "TODO",
-        mail: "info@bodewig.dev"
+        email: "info@bodewig.dev",
     },
     defaultLanguage: "Deutsch",
     eleventy: {
