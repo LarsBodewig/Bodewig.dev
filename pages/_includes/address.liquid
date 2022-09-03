@@ -1,0 +1,18 @@
+{% comment %}
+    address: {
+        name: string;
+        street: string;
+        city: string;
+        mail: string;
+    };
+{% endcomment %}
+
+<p>
+    {{ address.name -}}
+    <br>
+    {{ address.street -}}
+    <br>
+    {{ address.city -}}
+    <br>
+    E-Mail: <a href="mailto:{{ address.mail }}">{{ address.mail }}</a>
+</p>
