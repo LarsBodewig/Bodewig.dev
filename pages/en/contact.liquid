@@ -12,19 +12,24 @@ lang: English
         {% include 'header' %}
 
         <main>
-            <p></p>
+            <p>
+                If you wish to contact me, you can use any of the following
+                channels:
+            </p>
             <ul>
-                <li>
+                <li class="contact-channel">
+                    For business inquiries:
                     <a href="https://www.linkedin.com/in/larsbodewig/"
                         >LinkedIn/LarsBodewig</a
                     >
                 </li>
-                <li>
+                <li class="contact-channel">
+                    Everything code related:
                     <a href="https://github.com/LarsBodewig"
                         >GitHub/LarsBodewig</a
                     >
                 </li>
-                <li>
+                <li class="contact-channel">
                     For any other subject:
                     {% include 'email', email: 'Lars@Bodewig.dev' %}
                 </li>
