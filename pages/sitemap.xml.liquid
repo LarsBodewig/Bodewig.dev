@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
     collections.noindex -%}
     <url>
         <loc>{{ site.url | absoluteUrl }}</loc>
-        {%- assign localized = collections.all | where: "data.id", site.data.id
+        {%- assign localized = collections.all | where: 'data.id', site.data.id
         -%} {%- for item in localized -%}
         <xhtml:link
             rel="alternate"
