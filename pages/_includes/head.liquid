@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ pageCss | asset }}">
     {% unless page inCol collections.noindex -%}
         <link rel="canonical" href="{{ page.url | url }}">
-        {%- assign localized = collections.all | where: "data.id", colPage.data.id -%}
+        {%- assign localized = collections.all | where: 'data.id', colPage.data.id -%}
         {%- for item in localized -%}
             <link
                 rel="alternate"
