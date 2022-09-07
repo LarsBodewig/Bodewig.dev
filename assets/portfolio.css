@@ -35,14 +35,3 @@
     flex-wrap: wrap;
     gap: 0.75rem 0.5rem;
 }
-
-.badge {
-    display: inline-block;
-    border-radius: 0.7rem;
-    padding: 0 0.4rem 0.1rem;
-}
-
-.badge-text {
-    margin: auto;
-    color: var(--prime-text-color);
-}
