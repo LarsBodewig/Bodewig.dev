@@ -3,6 +3,7 @@
 
 @import "font.css";
 @import "frame.css";
+@import "badge.css";
 
 body {
     font-size: 1rem;
