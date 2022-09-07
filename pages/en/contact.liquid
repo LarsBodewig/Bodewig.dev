@@ -25,12 +25,8 @@ lang: English
                     >
                 </li>
                 <li>
-                    <a
-                        class="email"
-                        data-email="{{ 'Lars@Bodewig.dev' | encode }}"
-                        >Bitte aktivieren Sie JavaScript zum Anzeigen der
-                        E-Mail-Adresse</a
-                    >
+                    For any other subject:
+                    {% include 'email', email: 'Lars@Bodewig.dev' %}
                 </li>
             </ul>
         </main>
