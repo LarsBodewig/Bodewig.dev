@@ -1,5 +1,8 @@
 {% comment %}
     defaultLanguage: string;
+    site: {
+        tite: string;
+    };
     this: {
         id: string;
         lang: string;
@@ -11,7 +14,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     {%- assign colPage = page from collections.all -%}
-    <title>{{ colPage.data.title }}</title>
+    <title>
+        {{ colPage.data.title }}
+        -
+        {{ site.title }}
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page inCol collections.noindex -%}
         <meta name="robots" content="noindex,noarchive">

@@ -7,7 +7,8 @@
 {% endcomment %}
 
 <header class="header">
-    {%- assign indexUrl = '/' | url -%}
+    {%- assign index = collections.all | where: 'data.id', 'index' | where: 'data.lang', colPage.data.lang -%}
+    {%- assign indexUrl = index[0].url | url -%}
     <a
         class="banner"
         href="{{ indexUrl }}"
