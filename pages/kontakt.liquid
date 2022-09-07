@@ -11,7 +11,30 @@ lang: Deutsch
     <body>
         {% include 'header' %}
 
-        <main></main>
+        <main>
+            <p>
+                Falls Sie wünschen mich zu kontaktieren, bin ich über folgende
+                Kanäle erreichbar:
+            </p>
+            <ul>
+                <li class="contact-channel">
+                    Für geschäftliche Anfragen:
+                    <a href="https://www.linkedin.com/in/larsbodewig/"
+                        >LinkedIn/LarsBodewig</a
+                    >
+                </li>
+                <li class="contact-channel">
+                    Für technische Fragen:
+                    <a href="https://github.com/LarsBodewig"
+                        >GitHub/LarsBodewig</a
+                    >
+                </li>
+                <li class="contact-channel">
+                    Für Sonstiges:
+                    {% include 'email', email: 'Lars@Bodewig.dev' %}
+                </li>
+            </ul>
+        </main>
 
         {% include 'footer' %}
     </body>
