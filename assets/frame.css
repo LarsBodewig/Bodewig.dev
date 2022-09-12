@@ -92,3 +92,8 @@
 .language-item {
     margin: 0 1rem;
 }
+
+.language-icon {
+    height: 0.75rem;
+    margin-right: 0.4rem;
+}

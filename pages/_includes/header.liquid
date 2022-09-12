@@ -55,6 +55,11 @@
                             class="language-item-link"
                             href="{{ item.url | url }}"
                         >
+                            <img
+                                alt=""
+                                class="language-icon"
+                                src="{{ item.data.lang + '.svg' | downcase | asset }}"
+                            >
                             {{- item.data.lang -}}
                         </a>
                     </li>
