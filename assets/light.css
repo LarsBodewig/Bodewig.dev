@@ -1,8 +1,8 @@
 :root {
-    --main-bg-color: #fff;
+    --main-bg-color: #e7e7e7;
     --main-text-color: #000;
-    --prime-bg-color: #4c4ee3;
+    --prime-bg-color: #252575;
     --prime-text-color: #fff;
-    --contrast-text-color: #4ee34c;
+    --contrast-text-color: #11a20f;
     --passive-text-color: #666666;
 }
