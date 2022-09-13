@@ -1,9 +1,14 @@
 .portfolio-desc {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .portfolio-table {
     border-collapse: collapse;
+}
+
+.portfolio-thead {
+    background-color: var(--medius-bg-color);
+    color: var(--main-text-color);
 }
 
 .portfolio-table th,
