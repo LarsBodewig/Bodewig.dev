@@ -4,6 +4,9 @@
         lang: string;
         title: string;
     };
+    languages: {
+        [string]: string;
+    };
 {% endcomment %}
 
 <header class="header">
@@ -63,9 +66,9 @@
                             <img
                                 alt=""
                                 class="language-icon"
-                                src="{{ item.data.lang + '.svg' | downcase | asset }}"
+                                src="{{ item.data.lang + '.svg' | asset }}"
                             >
-                            {{- item.data.lang -}}
+                            {{- languages[item.data.lang] -}}
                         </a>
                     </li>
                 {%- endif -%}
