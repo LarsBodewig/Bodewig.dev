@@ -5,7 +5,7 @@ module.exports = {
         city: "TODO",
         email: "info@bodewig.dev",
     },
-    defaultLanguage: "Deutsch",
+    defaultLanguage: "de-DE",
     eleventy: {
         dir: {
             input: "pages",
@@ -14,6 +14,10 @@ module.exports = {
         pathPrefix: "/"
     },
     favicon: "assets/icon.svg",
+    languages: {
+        "de-DE": "Deutsch",
+        "en-GB": "English"
+    },
     liquid: {
         strictFilters: true,
         strictVariables: true
