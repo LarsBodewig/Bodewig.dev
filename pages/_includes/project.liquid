@@ -8,7 +8,9 @@
 <div class="project">
     <div class="project-header">
         {%- if href != '' -%}
-            <a href="{{href}}" class="project-name">{{ name }}</a>
+            <a href="{{href}}" class="project-name" rel="noreferrer">
+                {{- name -}}
+            </a>
         {%- else -%}
             <span class="project-name">{{ name }}</span>
         {%- endif -%}

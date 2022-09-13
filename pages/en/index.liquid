@@ -20,7 +20,9 @@ lang: English
                 I started developing in 2014 and have been developing in a
                 corporate environment continuously since 2017. My complete CV is
                 available on
-                <a href="https://www.linkedin.com/in/larsbodewig/"
+                <a
+                    href="https://www.linkedin.com/in/larsbodewig/"
+                    rel="noreferrer"
                     >LinkedIn</a
                 >.
             </p>
@@ -37,14 +39,14 @@ lang: English
                 I am most efficient in Backend or Full Stack Development, but
                 also interested in Pipeline Engineering, Library Development and
                 Language Parsing. My
-                <a href="{{ portfolioUrl }}">Portfolio</a> features a selection
-                of projects showcasing my skills.
+                <a href="{{ portfolioUrl }}" rel="noreferrer">Portfolio</a>
+                features a selection of projects showcasing my skills.
             </p>
             <p>
                 {%- assign contact = collections.all | where: 'data.id', 'contact' | where: 'data.lang', colPage.data.lang -%}
                 {%- assign contactUrl = contact[0].url | url -%}
                 If you want to reach out to me, see
-                <a href="{{ contactUrl }}">Contact</a>.
+                <a href="{{ contactUrl }}" rel="noreferrer">Contact</a>.
             </p>
         </main>
 
