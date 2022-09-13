@@ -7,6 +7,7 @@
         id: string;
         lang: string;
         title: string;
+        description: string;
     };
 {% endcomment %}
 
@@ -22,6 +23,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page inCol collections.noindex -%}
         <meta name="robots" content="noindex,noarchive">
+    {%- else -%}
+        <meta name="description" content="{{ description }}">
     {%- endif -%}
     <link rel="stylesheet" href="{{ 'bundle.css' | asset }}">
     {% assign pageCss = colPage.data.id + '.css' -%}
