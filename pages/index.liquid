@@ -21,7 +21,9 @@ lang: Deutsch
                 Ich habe 2014 mit dem Programmieren angefangen. Seit 2017
                 entwickle ich auch im Unternehmensumfeld. Mein kompletter
                 Lebenslauf ist verfügbar auf
-                <a href="https://www.linkedin.com/in/larsbodewig/"
+                <a
+                    href="https://www.linkedin.com/in/larsbodewig/"
+                    rel="noreferrer"
                     >LinkedIn</a
                 >.
             </p>
@@ -39,16 +41,16 @@ lang: Deutsch
                 interessiere mich aber auch für Pipeline Engineering, die
                 Entwicklung von Software-Bibliotheken und das Entwerfen und
                 Parsen von Sprachen. Mein
-                <a href="{{ portfolioUrl }}">Portfolio</a> gibt einen Überblick
-                über ein paar erwähnenswerte Projekte, die diese Skills
-                verwenden.
+                <a href="{{ portfolioUrl }}" rel="noreferrer">Portfolio</a> gibt
+                einen Überblick über ein paar erwähnenswerte Projekte, die diese
+                Skills verwenden.
             </p>
             <p>
                 {%- assign contact = collections.all | where: 'data.id', 'contact' | where: 'data.lang', colPage.data.lang -%}
                 {%- assign contactUrl = contact[0].url | url -%}
                 Für Fragen und Angebote bin ich jederzeit über verschiedene
                 Kanäle erreichbar:
-                <a href="{{ contactUrl }}">Kontakt</a>.
+                <a href="{{ contactUrl }}" rel="noreferrer">Kontakt</a>.
             </p>
         </main>
 
