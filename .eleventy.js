@@ -1,6 +1,7 @@
 const config = require("./config");
 const prettier = require("prettier");
 const liquidjs = require('liquidjs');
+const liquidExt = require('./liquidExt');
 const nanomatch = require("nanomatch");
 
 function collectionSortTitle(collectionApi) {
@@ -95,6 +96,7 @@ module.exports = function (eleventyConfig) {
         }
         return hash;
     });
+    eleventyConfig.addLiquidTag("include", liquidExt.tags.includeWithParams);
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
         const excluded = nanomatch(outputPath, config.prettierExclude);
         if (excluded.length) { // empty if outputPath is not excluded
