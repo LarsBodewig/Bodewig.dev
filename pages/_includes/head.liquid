@@ -59,5 +59,15 @@
         {%- endfor -%}
     {%- endunless -%}
     <link rel="icon" href="{{ '/favicon.svg' | url }}">
+    <meta
+        name="theme-color"
+        media="(prefers-color-scheme: light)"
+        content="#bfbfbf"
+    >
+    <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="#444"
+    >
     <script src="{{ '/email.js' | asset }}"></script>
 </head>
