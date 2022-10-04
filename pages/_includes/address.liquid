@@ -1,6 +1,7 @@
 {% comment %}
     address: {
         name: string;
+        careOf?: string;
         street: string;
         city: string;
         email: string;
@@ -10,6 +11,10 @@
 <p>
     {{ address.name -}}
     <br>
+    {%- if 'careOf' in address -%}
+        {{ address.careOf }}
+        <br>
+    {%- endif -%}
     {{ address.street -}}
     <br>
     {{ address.city -}}

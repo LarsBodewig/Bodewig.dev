@@ -1,8 +1,9 @@
 module.exports = {
     address: {
         name: "Lars Bodewig",
-        street: "TODO",
-        city: "TODO",
+        careOf: "c/o Block Services",
+        street: "Stuttgarter Str. 106",
+        city: "70736 Fellbach",
         email: "info@bodewig.dev",
     },
     defaultLanguage: "de-DE",

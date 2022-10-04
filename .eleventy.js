@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
                 collection.some(item => item.url === elem.url),
             'from': (elem, collection) =>
                 collection.find(item => item.url === elem.url),
+            'in': (field, obj) => field in obj,
         }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
