@@ -16,8 +16,10 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-    build:
-        name: Build
+    pages:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
@@ -28,14 +30,6 @@ jobs:
               run: npm ci
             - name: Run eleventy
               run: npm run build
-    deploy:
-        name: Deploy
-        runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        needs: build
-        steps:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
