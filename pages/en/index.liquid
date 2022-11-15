@@ -5,7 +5,7 @@ description: Welcome to my personal website. My name is Lars Bodewig. I am a Sof
 lang: en-GB
 ---
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
     {% include 'head' %}
 
     <body>
@@ -35,7 +35,10 @@ lang: en-GB
                 {% include 'badge', label: 'TypeScript' %} and
                 {% include 'badge', label: 'SQL' %}.<br>
 
-                {%- assign portfolio = collections.all | where: 'data.id', 'portfolio' | where: 'data.lang', colPage.data.lang -%}
+                {%- assign portfolio = collections.all
+                    | where: 'data.id', 'portfolio'
+                    | where: 'data.lang', colPage.data.lang
+                -%}
                 {%- assign portfolioUrl = portfolio[0].url | url -%}
                 I am most efficient in Backend or Full Stack Development, but
                 also interested in Pipeline Engineering, Library Development and
@@ -44,7 +47,10 @@ lang: en-GB
                 features a selection of projects showcasing my skills.
             </p>
             <p>
-                {%- assign contact = collections.all | where: 'data.id', 'contact' | where: 'data.lang', colPage.data.lang -%}
+                {%- assign contact = collections.all
+                    | where: 'data.id', 'contact'
+                    | where: 'data.lang', colPage.data.lang
+                -%}
                 {%- assign contactUrl = contact[0].url | url -%}
                 If you want to reach out to me, see
                 <a href="{{ contactUrl }}" rel="noreferrer">Contact</a>.

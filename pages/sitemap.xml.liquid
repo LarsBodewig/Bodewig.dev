@@ -7,18 +7,24 @@ eleventyExcludeFromCollections: true
     xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-    {%- for site in collections.all -%} {%- unless site inCol
-    collections.noindex -%}
-    <url>
-        <loc>{{ site.url | absoluteUrl }}</loc>
-        {%- assign localized = collections.all | where: 'data.id', site.data.id
-        -%} {%- for item in localized -%}
-        <xhtml:link
-            rel="alternate"
-            hreflang="{{ item.data.lang }}"
-            href="{{ item.url | absoluteUrl }}"
-        />
-        {%- endfor -%}
-    </url>
-    {%- endunless -%} {%- endfor -%}
+    {%- for site in collections.all -%}
+        {%-
+            unless site inCol
+            collections.noindex
+        -%}
+            <url>
+                <loc>{{ site.url | absoluteUrl }}</loc>
+                {%- assign localized = collections.all
+                    | where: 'data.id', site.data.id
+                -%}
+                {%- for item in localized -%}
+                    <xhtml:link
+                        rel="alternate"
+                        hreflang="{{ item.data.lang }}"
+                        href="{{ item.url | absoluteUrl }}"
+                    />
+                {%- endfor -%}
+            </url>
+        {%- endunless -%}
+    {%- endfor -%}
 </urlset>

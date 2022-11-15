@@ -6,7 +6,7 @@ tags: topnav
 lang: en-GB
 ---
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
     {% include 'head' %}
 
     <body>
@@ -50,9 +50,8 @@ lang: en-GB
                                 data sources and a comprehensive search
                                 function.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'Professional project'
+                            {% include 'project',
+                                name: 'Professional project',
                                 description: desc
                             %}
                         </td>
@@ -77,11 +76,10 @@ lang: en-GB
                                 generated with 11ty, using liquid as templating
                                 language.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'Bodewig.dev'
-                                subtitle: '(Yes, the website you are currently reading!)'
-                                href: 'https://github.com/LarsBodewig/Bodewig.dev'
+                            {% include 'project',
+                                name: 'Bodewig.dev',
+                                subtitle: '(Yes, the website you are currently reading!)',
+                                href: 'https://github.com/LarsBodewig/Bodewig.dev',
                                 description: desc
                             %}
                         </td>
@@ -102,10 +100,9 @@ lang: en-GB
                                 A Java servlet filter to query JSON servlets
                                 using JsonPath, the equivalent of XPath for XML.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'JPath-Filter'
-                                href: 'https://github.com/LarsBodewig/JPath-Filter'
+                            {% include 'project',
+                                name: 'JPath-Filter',
+                                href: 'https://github.com/LarsBodewig/JPath-Filter',
                                 description: desc
                             %}
                         </td>
@@ -122,11 +119,10 @@ lang: en-GB
                                 Website with bash look and feel to quickly
                                 simulate and assess simple *nix commands.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'Web-Shell'
-                                subtitle: '- A simulated bash running inside a browser'
-                                href: 'https://github.com/LarsBodewig/Web-Shell'
+                            {% include 'project',
+                                name: 'Web-Shell',
+                                subtitle: '- A simulated bash running inside a browser',
+                                href: 'https://github.com/LarsBodewig/Web-Shell',
                                 description: desc
                             %}
                         </td>
@@ -151,10 +147,9 @@ lang: en-GB
                                 discontinued Google services, products, devices,
                                 and apps.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'Visual-killedbygoogle'
-                                href: 'https://github.com/LarsBodewig/Visual-killedbygoogle'
+                            {% include 'project',
+                                name: 'Visual-killedbygoogle',
+                                href: 'https://github.com/LarsBodewig/Visual-killedbygoogle',
                                 description: desc
                             %}
                         </td>
@@ -180,10 +175,9 @@ lang: en-GB
                                 in into terms, mapping out a truth tree and
                                 visualizing it.
                             {%- endcapture %}
-                            {%
-                                include 'project',
-                                name: 'Bachelor thesis about implementing and visualizing truth trees'
-                                href: 'https://github.com/LarsBodewig/HS-Bachelor'
+                            {% include 'project',
+                                name: 'Bachelor thesis about implementing and visualizing truth trees',
+                                href: 'https://github.com/LarsBodewig/HS-Bachelor',
                                 description: desc
                             %}
                         </td>

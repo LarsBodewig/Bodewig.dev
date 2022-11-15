@@ -5,7 +5,7 @@ description: Wilkommen auf meiner persönlichen Webseite. Mein Name ist Lars Bod
 lang: de-DE
 ---
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
     {% include 'head' %}
 
     <body>
@@ -36,7 +36,10 @@ lang: de-DE
                 {% include 'badge', label: 'TypeScript' %} und
                 {% include 'badge', label: 'SQL' %}.<br>
 
-                {%- assign portfolio = collections.all | where: 'data.id', 'portfolio' | where: 'data.lang', colPage.data.lang -%}
+                {%- assign portfolio = collections.all
+                    | where: 'data.id', 'portfolio'
+                    | where: 'data.lang', colPage.data.lang
+                -%}
                 {%- assign portfolioUrl = portfolio[0].url | url -%}
                 Ich bin meist als Backend- oder Full-Stack-Entwickler tätig,
                 interessiere mich aber auch für Pipeline Engineering, die
@@ -47,7 +50,10 @@ lang: de-DE
                 Skills verwenden.
             </p>
             <p>
-                {%- assign contact = collections.all | where: 'data.id', 'contact' | where: 'data.lang', colPage.data.lang -%}
+                {%- assign contact = collections.all
+                    | where: 'data.id', 'contact'
+                    | where: 'data.lang', colPage.data.lang
+                -%}
                 {%- assign contactUrl = contact[0].url | url -%}
                 Für Fragen und Angebote bin ich jederzeit über verschiedene
                 Kanäle erreichbar:

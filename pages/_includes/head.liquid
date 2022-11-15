@@ -27,7 +27,9 @@
         <meta name="description" content="{{ description }}">
     {%- endif -%}
     <link rel="preload" href="{{ 'icon.svg' | asset }}" as="image">
-    {%- assign localized = collections.all | where: 'data.id', colPage.data.id -%}
+    {%- assign localized = collections.all
+        | where: 'data.id', colPage.data.id
+    -%}
     {%- for item in localized -%}
         {%- if item.data.lang != colPage.data.lang -%}
             <link
@@ -42,7 +44,9 @@
     <link rel="stylesheet" href="{{ pageCss | asset }}">
     {% unless page inCol collections.noindex -%}
         <link rel="canonical" href="{{ page.url | url }}">
-        {%- assign localized = collections.all | where: 'data.id', colPage.data.id -%}
+        {%- assign localized = collections.all
+            | where: 'data.id', colPage.data.id
+        -%}
         {%- for item in localized -%}
             <link
                 rel="alternate"
