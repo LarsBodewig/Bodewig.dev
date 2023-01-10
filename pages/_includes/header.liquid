@@ -44,6 +44,7 @@
         <ul class="menu">
             {%- assign topnav = collections.topnav
                 | where: 'data.lang', colPage.data.lang
+                | sortBy: 'id'
             -%}
             {%- for item in topnav -%}
                 <li class="menu-item">
@@ -63,6 +64,7 @@
         <ul class="languages">
             {%- assign localized = collections.all
                 | where: 'data.id', colPage.data.id
+                | sortBy: 'lang'
             -%}
             {%- for item in localized -%}
                 {%- if item.data.lang != colPage.data.lang -%}

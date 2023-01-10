@@ -4,13 +4,6 @@ const liquidjs = require('liquidjs');
 const liquidExt = require('./liquidExt');
 const nanomatch = require("nanomatch");
 
-function collectionSortTitle(collectionApi) {
-    const collection = collectionApi.getAll();
-    const colCopy = [...collection]; // prevent sorting inplace
-    const ordered = colCopy.sort((a, b) => a.data.title - b.data.title);
-    return ordered;
-}
-
 module.exports = function (eleventyConfig) {
     Object.entries(config).forEach(([key, value]) =>
         eleventyConfig.addGlobalData(key, value));
@@ -44,8 +37,6 @@ module.exports = function (eleventyConfig) {
     if (config.favicon) {
         eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
     }
-    // eleventyConfig.addCollection("topnav", collectionSortTitle);
-    // eleventyConfig.addCollection("endnav", collectionSortTitle);
     eleventyConfig.addFilter("asset", (file) => {
         const url = "/assets/" + file;
         const path = eleventyConfig.getFilter("url")(url);
@@ -95,6 +86,19 @@ module.exports = function (eleventyConfig) {
             hash = hash & hash;
         }
         return hash;
+    });
+    eleventyConfig.addFilter("sortBy", (collection, ...fields) => {
+        const colCopy = [...collection];
+        colCopy.sort((left, right) => {
+            for (const field of fields) {
+                const valueLeft = left.data[field].toString();
+                const valueRight = right.data[field].toString();
+                const result = valueLeft.localeCompare(valueRight);
+                if (result !== 0) return result;
+            }
+            return 0;
+        });
+        return colCopy;
     });
     eleventyConfig.addLiquidTag("include", liquidExt.tags.includeWithParams);
     eleventyConfig.addTransform("prettier", (content, outputPath) => {

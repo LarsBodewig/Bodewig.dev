@@ -7,7 +7,8 @@ eleventyExcludeFromCollections: true
     xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
-    {%- for site in collections.all -%}
+    {%- assign sorted = collections.all | sortBy: 'id', 'lang' -%}
+    {%- for site in sorted -%}
         {%-
             unless site inCol
             collections.noindex
@@ -16,6 +17,7 @@ eleventyExcludeFromCollections: true
                 <loc>{{ site.url | absoluteUrl }}</loc>
                 {%- assign localized = collections.all
                     | where: 'data.id', site.data.id
+                    | sortBy: 'lang'
                 -%}
                 {%- for item in localized -%}
                     <xhtml:link
