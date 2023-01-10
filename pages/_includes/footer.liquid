@@ -11,6 +11,7 @@
             {%- assign colPage = page from collections.all -%}
             {%- assign localized = collections.endnav
                 | where: 'data.lang', colPage.data.lang
+                | sortBy: 'id'
             -%}
             {%- for item in localized -%}
                 <li class="menu-item">
