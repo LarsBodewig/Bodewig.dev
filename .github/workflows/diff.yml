@@ -22,7 +22,7 @@ jobs:
     - name: (main) Run eleventy
       run: npm run build
     - name: (main) Move build
-      run: mv build /tmp/build_main
+      run: mv build ${{ runner.temp }}/build_main
     - name: (HEAD) Checkout repository
       uses: actions/checkout@v3
     - name: (HEAD) Setup Node
@@ -34,4 +34,4 @@ jobs:
     - name: (HEAD) Run eleventy
       run: npm run build
     - name: (HEAD) Compare builds
-      run: diff -r /tmp/build_main build
+      run: diff -r ${{ runner.temp }}/build_main build
