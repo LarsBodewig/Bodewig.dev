@@ -7,14 +7,18 @@
 
 <div class="project">
     <div class="project-header">
-        {%- if 'href' in params -%}
-            <a href="{{href}}" class="project-name" rel="noreferrer external">
+        {%- if href -%}
+            <a
+                href="{{ href }}"
+                class="project-name"
+                rel="noreferrer external"
+            >
                 {{- name -}}
             </a>
         {%- else -%}
             <span class="project-name">{{ name }}</span>
         {%- endif -%}
-        {%- if 'subtitle' in params -%}
+        {%- if subtitle -%}
             <span class="project-subtitle"> {{ subtitle }}</span>
         {%- endif -%}
     </div>
