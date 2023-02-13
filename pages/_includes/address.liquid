@@ -11,7 +11,7 @@
 <p>
     {{ address.name -}}
     <br>
-    {%- if 'careOf' in address -%}
+    {%- if address.careOf -%}
         {{ address.careOf }}
         <br>
     {%- endif -%}

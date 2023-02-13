@@ -1,7 +1,6 @@
 const config = require("./config");
 const prettier = require("prettier");
 const liquidjs = require('liquidjs');
-const liquidExt = require('./liquidExt');
 const nanomatch = require("nanomatch");
 
 module.exports = function (eleventyConfig) {
@@ -31,7 +30,9 @@ module.exports = function (eleventyConfig) {
             'from': (elem, collection) =>
                 collection.find(item => item.url === elem.url),
             'in': (field, obj) => field in obj,
-        }
+        },
+        strictVariables: true,
+        lenientIf: true,
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
     if (config.favicon) {
@@ -41,7 +42,7 @@ module.exports = function (eleventyConfig) {
         const url = "/assets/" + file;
         const path = eleventyConfig.getFilter("url")(url);
         return path;
-    })
+    });
     eleventyConfig.addFilter("absoluteUrl", (url) => {
         const host = config.server.protocol + "://" + config.server.domain;
         const path = eleventyConfig.getFilter("url")(url);
@@ -74,10 +75,6 @@ module.exports = function (eleventyConfig) {
         }
         return "hsl(" + h + ',' + s + '%,' + l + '%)';
     });
-    eleventyConfig.addFilter("log", (value) => {
-        console.log(value);
-        return value;
-    });
     eleventyConfig.addFilter("hash", (value) => {
         let hash = 0;
         for (let i = 0; i < value.length; i++) {
@@ -100,7 +97,6 @@ module.exports = function (eleventyConfig) {
         });
         return colCopy;
     });
-    eleventyConfig.addLiquidTag("include", liquidExt.tags.includeWithParams);
     eleventyConfig.addTransform("prettier", (content, outputPath) => {
         const excluded = nanomatch(outputPath, config.prettierExclude);
         if (excluded.length) { // empty if outputPath is not excluded
