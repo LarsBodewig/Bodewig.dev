@@ -14,7 +14,7 @@ module.exports = {
         },
         pathPrefix: "/"
     },
-    favicon: "assets/icon.svg",
+    favicon: "assets/favicon.svg",
     languages: {
         "de-DE": "Deutsch",
         "en-GB": "English"

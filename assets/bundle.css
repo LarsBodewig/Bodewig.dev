@@ -1,22 +1,8 @@
 @import "light.css" not (prefers-color-scheme: dark);
 @import "dark.css" (prefers-color-scheme: dark);
-
 @import "font.css";
+
 @import "frame.css";
+@import "header.css";
+@import "footer.css";
 @import "badge.css";
-
-body {
-    font-size: 1rem;
-    margin: 0;
-    font-family: var(--main-font-family);
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-}
-
-main {
-    margin: 1.5rem 1rem 2rem;
-}
-
-a:visited {
-    color: var(--contrast-text-color);
-}

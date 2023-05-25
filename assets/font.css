@@ -1,5 +1,6 @@
 :root {
-    --main-font-family: "Segoe UI", Helvetica, sans-serif;
-    --title-font-family: "Courier New", Courier, monospace;
-    --menu-font-family: Verdana, sans-serif;
+    --main-font-family: "Segoe UI", sans-serif;
+    --menu-font-family: Helvetica, sans-serif;
+    --icon-font-family: "Courier New", Courier, monospace;
+    --bold-font-family: Verdana, sans-serif;
 }

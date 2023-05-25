@@ -1,10 +1,17 @@
 :root {
-    --main-bg-color: #e7e7e7;
+    --body-bg-color: #777;
+    --frame-text-color: #000;
+    --header-bg-color: #d9ccff;
+
+    --main-background-image: url("/assets/adwaita-l.webp");
+    --main-background-filter: hue-rotate(340deg) contrast(0.4) saturate(1.5)
+        brightness(1.5) blur(3rem);
     --main-text-color: #000;
-    --prime-bg-color: #252575;
-    --prime-text-color: #fff;
-    --medius-bg-color: #bfbfbf;
-    --medius-text-color: #000;
-    --contrast-text-color: #11a20f;
+    --main-placeholder-bg-color: #b6a7c8;
+    --main-backdrop-bg-color: rgba(255, 255, 255, 0.5);
+
+    --prime-text-color: #000;
+    --link-text-color: #003973;
+    --link-visited-text-color: #551a8b;
     --passive-text-color: #666666;
 }
