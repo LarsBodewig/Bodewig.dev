@@ -7,4 +7,7 @@
     --medius-text-color: #fff;
     --contrast-text-color: #70a424;
     --passive-text-color: #aeaeae;
+    --icon-filter-invert: 100%;
+    --window-bg-color: #999;
+    --window-frame-bg-color: #777;
 }
