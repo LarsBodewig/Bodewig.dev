@@ -15,6 +15,7 @@
         | where: 'data.lang', colPage.data.lang
     -%}
     {%- assign indexUrl = index[0].url | url -%}
+    <span class="heading-divider">></span>
     <a
         class="banner"
         href="{{ indexUrl }}"
@@ -23,14 +24,6 @@
             aria-current="page"
         {%- endif -%}
     >
-        <img
-            class="banner-icon"
-            src="{{ 'icon.svg' | asset }}"
-            alt=""
-            aria-hidden="true"
-            width="20"
-            height="20"
-        >
         <span class="banner-text">{{ site.title }}</span>
     </a>
     <div class="heading-container">

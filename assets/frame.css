@@ -1,5 +1,5 @@
 .header {
-    margin: 0 5rem;
+    margin: 2rem 7rem 3rem;
     border: 0.75rem solid var(--medius-bg-color);
     border-radius: 2rem;
     background-color: var(--medius-bg-color);
@@ -11,13 +11,9 @@
 }
 
 .footer {
+    margin-top: 2rem;
     color: var(--prime-text-color);
-    margin-bottom: 2rem;
-}
-
-.header,
-.footer {
-    font-family: var(--menu-font-family);
+    margin-bottom: 1rem;
 }
 
 .topnav {
@@ -50,10 +46,14 @@
 }
 
 .banner-text,
-.heading,
+.heading {
+    font-size: 1.25rem;
+    font-family: var(--menu-font-family);
+}
+
 .heading-divider {
-    font-size: 1.5rem;
-    font-family: var(--title-font-family);
+    font-size: 1.75rem;
+    font-family: var(--icon-font-family);
 }
 
 .heading-container {
@@ -73,10 +73,11 @@
 
 .topnav,
 .endnav {
-    margin-left: auto;
+    font-family: var(--menu-font-family);
 }
 
 .topnav {
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     padding: 0.25rem 0;
@@ -117,4 +118,11 @@
 .language-icon {
     height: 0.75rem;
     margin-right: 0.4rem;
+}
+
+.copyright {
+    margin-top: 1rem;
+    font-family: var(--bold-font-family);
+    font-size: 0.7rem;
+    text-align: center;
 }
