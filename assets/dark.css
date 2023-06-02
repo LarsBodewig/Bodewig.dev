@@ -1,14 +1,16 @@
 :root {
     --main-bg-color: #181818;
     --main-text-color: #fff;
-    --prime-bg-color: #3c2360;
+    --main-placeholder-bg-color: #3c2360;
+    --main-backdrop-bg-color: rgba(0, 0, 0, 0.5);
+
+    --header-bg-color: #444;
+    --header-text-color: #fff;
+    --header-icon-filter-invert: 100%;
+
     --prime-text-color: #fff;
-    --medius-bg-color: #444;
-    --medius-text-color: #fff;
     --contrast-text-color: #70a424;
     --passive-text-color: #aeaeae;
-    --icon-filter-invert: 100%;
-    --window-bg-color: #999;
-    --window-frame-bg-color: #777;
-    --background-image: url("/assets/adwaita-d.webp");
+
+    --main-background-image: url("/assets/adwaita-d.webp");
 }

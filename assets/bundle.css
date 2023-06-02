@@ -10,7 +10,6 @@ body {
     margin: 0;
     font-family: var(--main-font-family);
     background-color: var(--main-bg-color);
-    color: var(--main-text-color);
     line-height: 1.2rem;
     padding: 1rem;
 }
@@ -19,11 +18,12 @@ main {
     margin: 1.5rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    background-color: var(--prime-bg-color);
+    background-color: var(--main-placeholder-bg-color);
     box-shadow: 0 0 15px black;
-    background: var(--background-image);
+    background: var(--main-background-image);
     background-size: 100vw;
     background-repeat: repeat-y;
+    color: var(--main-text-color);
 }
 
 a:visited {

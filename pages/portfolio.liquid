@@ -13,193 +13,188 @@ lang: de-DE
         {% include 'header' %}
 
         <main>
-            <div class="content-bg">
-                <div class="portfolio-desc">
-                    <p>
-                        Diese Seite enthält eine Auflistung nennenswerter
-                        Projekte an denen ich beruflich oder privat gearbeitet
-                        habe. Alle meine privaten Projekte sind öffentlich
-                        einsehbar auf
-                        <a
-                            href="https://github.com/LarsBodewig"
-                            rel="noreferrer external"
-                            >Github</a
-                        >.
-                    </p>
-                    <p>
-                        Jede Zeile enthält eine Auswahl relevanter
-                        Programmiersprachen, Frameworks und Werkzeuge als
-                        Skills. Da Projekte in ihrer Komplexität variieren,
-                        Technologien sich gegenseitig bedingen und Werkzeuge
-                        ausgetauscht werden können, ist diese Auswahl nicht
-                        abschließend vollständig. Jedoch stellt sie einen
-                        Schwerpunkt der gewonnenen Erfahrung und des Wissens
-                        durch die Arbeit in dem jeweiligen Projekt dar.
-                    </p>
-                </div>
-                <table class="portfolio-table">
-                    <thead class="portfolio-thead">
-                        <tr>
-                            <th>Projekt</th>
-                            <th>Skills</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Über 2,5 Jahre Full-Stack-Development an
-                                    einer öffentlichen Internetseite der
-                                    Landesregierung, inklusive
-                                    Daten-Aggregation, -Transformation,
-                                    -Visualisierung und einer umfassenden
-                                    Suchfunktion.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'Berufliches Projekt',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'Java' %}
-                                    {% include 'badge', label: 'TypeScript' %}
-                                    {% include 'badge', label: 'JavaScript' %}
-                                    {% include 'badge', label: 'SQL' %}
-                                    {% include 'badge', label: 'Redux' %}
-                                    {% include 'badge', label: 'HTML' %}
-                                    {% include 'badge', label: 'CSS' %}
-                                    {% include 'badge', label: 'Maven' %}
-                                    {% include 'badge', label: 'yarn' %}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Eine mit 11ty generierte, statische,
-                                    mehrsprachige Webseite, die liquid als
-                                    Template-Sprache verwendet.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'Bodewig.dev',
-                                    subtitle: '(Ja, diese Webseite!)',
-                                    href: 'https://github.com/LarsBodewig/Bodewig.dev',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'JavaScript' %}
-                                    {% include 'badge', label: '11ty' %}
-                                    {% include 'badge', label: 'liquid' %}
-                                    {% include 'badge', label: 'HTML' %}
-                                    {% include 'badge', label: 'CSS' %}
-                                    {% include 'badge', label: 'npm' %}
-                                    {% include 'badge', label: 'CI' %}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Ein Java Servlet-Filter für JSON-Servlets um
-                                    Teile der Daten mittels JsonPath abzufragen,
-                                    dem Äquivalent zu XPath für XML.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'JPath-Filter',
-                                    href: 'https://github.com/LarsBodewig/JPath-Filter',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'Java' %}
-                                    {% include 'badge', label: 'Maven' %}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Website mit Bash Look-and-Feel zur
-                                    Simulation simpler *nix-Befehle.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'Web-Shell',
-                                    subtitle: '- Eine im Browser simulierte Bash',
-                                    href: 'https://github.com/LarsBodewig/Web-Shell',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'TypeScript' %}
-                                    {% include 'badge', label: 'React' %}
-                                    {% include 'badge', label: 'Redux' %}
-                                    {% include 'badge', label: 'TSX' %}
-                                    {% include 'badge', label: 'HTML' %}
-                                    {% include 'badge', label: 'CSS' %}
-                                    {% include 'badge', label: 'npm' %}
-                                    {% include 'badge', label: '*nix' %}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Visualisierung von Killed by Google, dem
-                                    Google-Friedhof; einer open-source Sammlung
-                                    aller nicht mehr verfügbaren Google
-                                    Services, Produkte, Geräte und Apps.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'Visual-killedbygoogle',
-                                    href: 'https://github.com/LarsBodewig/Visual-killedbygoogle',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'TypeScript' %}
-                                    {% include 'badge', label: 'React' %}
-                                    {% include 'badge', label: 'Redux' %}
-                                    {% include 'badge', label: 'TSX' %}
-                                    {% include 'badge', label: 'HTML' %}
-                                    {% include 'badge', label: 'CSS' %}
-                                    {% include 'badge', label: 'npm' %}
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                {% capture desc -%}
-                                    Wahrheitsbäume sind eine Methode der Logik
-                                    zum Lösen logischer Aussagen durch die
-                                    Prüfung auf Widersprüche zwischen einzelnen
-                                    Termen. Diese Anwendung interpretiert eine
-                                    logische Aussage als Konsolen-Eingabe,
-                                    bricht sie in einzelne Terme, erzeugt daraus
-                                    einen Wahrheitsbaum und stellt diesen
-                                    grafisch dar.
-                                {%- endcapture %}
-                                {% include 'project',
-                                    name: 'Bachelor-Arbeit über die Implementierung und Visualisierung von Wahrheitsbäumen',
-                                    href: 'https://github.com/LarsBodewig/HS-Bachelor',
-                                    description: desc
-                                %}
-                            </td>
-                            <td>
-                                <div class="skill-badges">
-                                    {% include 'badge', label: 'Java' %}
-                                    {% include 'badge', label: 'ANTLR' %}
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="portfolio-desc">
+                <p>
+                    Diese Seite enthält eine Auflistung nennenswerter Projekte
+                    an denen ich beruflich oder privat gearbeitet habe. Alle
+                    meine privaten Projekte sind öffentlich einsehbar auf
+                    <a
+                        href="https://github.com/LarsBodewig"
+                        rel="noreferrer external"
+                        >Github</a
+                    >.
+                </p>
+                <p>
+                    Jede Zeile enthält eine Auswahl relevanter
+                    Programmiersprachen, Frameworks und Werkzeuge als Skills. Da
+                    Projekte in ihrer Komplexität variieren, Technologien sich
+                    gegenseitig bedingen und Werkzeuge ausgetauscht werden
+                    können, ist diese Auswahl nicht abschließend vollständig.
+                    Jedoch stellt sie einen Schwerpunkt der gewonnenen Erfahrung
+                    und des Wissens durch die Arbeit in dem jeweiligen Projekt
+                    dar.
+                </p>
             </div>
+            <table class="portfolio-table">
+                <thead class="portfolio-thead">
+                    <tr>
+                        <th>Projekt</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Über 2,5 Jahre Full-Stack-Development an einer
+                                öffentlichen Internetseite der Landesregierung,
+                                inklusive Daten-Aggregation, -Transformation,
+                                -Visualisierung und einer umfassenden
+                                Suchfunktion.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'Berufliches Projekt',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'TypeScript' %}
+                                {% include 'badge', label: 'JavaScript' %}
+                                {% include 'badge', label: 'SQL' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'Maven' %}
+                                {% include 'badge', label: 'yarn' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Eine mit 11ty generierte, statische,
+                                mehrsprachige Webseite, die liquid als
+                                Template-Sprache verwendet.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'Bodewig.dev',
+                                subtitle: '(Ja, diese Webseite!)',
+                                href: 'https://github.com/LarsBodewig/Bodewig.dev',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'JavaScript' %}
+                                {% include 'badge', label: '11ty' %}
+                                {% include 'badge', label: 'liquid' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
+                                {% include 'badge', label: 'CI' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Ein Java Servlet-Filter für JSON-Servlets um
+                                Teile der Daten mittels JsonPath abzufragen, dem
+                                Äquivalent zu XPath für XML.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'JPath-Filter',
+                                href: 'https://github.com/LarsBodewig/JPath-Filter',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'Maven' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Website mit Bash Look-and-Feel zur Simulation
+                                simpler *nix-Befehle.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'Web-Shell',
+                                subtitle: '- Eine im Browser simulierte Bash',
+                                href: 'https://github.com/LarsBodewig/Web-Shell',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'TypeScript' %}
+                                {% include 'badge', label: 'React' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'TSX' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
+                                {% include 'badge', label: '*nix' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Visualisierung von Killed by Google, dem
+                                Google-Friedhof; einer open-source Sammlung
+                                aller nicht mehr verfügbaren Google Services,
+                                Produkte, Geräte und Apps.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'Visual-killedbygoogle',
+                                href: 'https://github.com/LarsBodewig/Visual-killedbygoogle',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'TypeScript' %}
+                                {% include 'badge', label: 'React' %}
+                                {% include 'badge', label: 'Redux' %}
+                                {% include 'badge', label: 'TSX' %}
+                                {% include 'badge', label: 'HTML' %}
+                                {% include 'badge', label: 'CSS' %}
+                                {% include 'badge', label: 'npm' %}
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {% capture desc -%}
+                                Wahrheitsbäume sind eine Methode der Logik zum
+                                Lösen logischer Aussagen durch die Prüfung auf
+                                Widersprüche zwischen einzelnen Termen. Diese
+                                Anwendung interpretiert eine logische Aussage
+                                als Konsolen-Eingabe, bricht sie in einzelne
+                                Terme, erzeugt daraus einen Wahrheitsbaum und
+                                stellt diesen grafisch dar.
+                            {%- endcapture %}
+                            {% include 'project',
+                                name: 'Bachelor-Arbeit über die Implementierung und Visualisierung von Wahrheitsbäumen',
+                                href: 'https://github.com/LarsBodewig/HS-Bachelor',
+                                description: desc
+                            %}
+                        </td>
+                        <td>
+                            <div class="skill-badges">
+                                {% include 'badge', label: 'Java' %}
+                                {% include 'badge', label: 'ANTLR' %}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
 
         {% include 'footer' %}

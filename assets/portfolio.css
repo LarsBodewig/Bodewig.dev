@@ -7,7 +7,7 @@
 }
 
 .portfolio-thead {
-    background-color: var(--medius-bg-color);
+    background-color: var(--header-bg-color);
     color: var(--main-text-color);
 }
 
@@ -15,6 +15,10 @@
 .portfolio-table td {
     border: 0.1rem solid var(--main-text-color);
     padding: 0.5rem;
+}
+
+.portfolio-table tbody {
+    background-color: var(--main-backdrop-bg-color);
 }
 
 .project {
