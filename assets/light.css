@@ -6,7 +6,7 @@
     --main-background-filter: hue-rotate(340deg) contrast(0.4) saturate(1.5)
         brightness(1.5) blur(3rem);
     --main-text-color: #000;
-    --main-placeholder-bg-color: #d9ccff;
+    --main-placeholder-bg-color: #b6a7c8;
     --main-backdrop-bg-color: rgba(255, 255, 255, 0.5);
 
     --header-bg-color: #d9ccff;
