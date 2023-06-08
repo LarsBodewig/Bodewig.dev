@@ -16,7 +16,6 @@ body {
 
 main {
     margin: 1.5rem;
-    padding: 1.5rem;
     border-radius: 1rem;
     background-color: var(--main-placeholder-bg-color);
     box-shadow: 0 0 15px black;
@@ -24,6 +23,13 @@ main {
     background-size: 100vw;
     background-repeat: repeat-y;
     color: var(--main-text-color);
+}
+
+.background-filter {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: var(--main-background-filter);
+    -webkit-backdrop-filter: var(--main-background-filter);
 }
 
 a:visited {
