@@ -1,3 +1,38 @@
+body {
+    font-size: 1rem;
+    margin: 0;
+    font-family: var(--main-font-family);
+    background-color: var(--body-bg-color);
+    line-height: 1.2rem;
+    padding: 1rem;
+}
+
+main {
+    margin: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--main-placeholder-bg-color);
+    box-shadow: 0 0 15px black;
+    background: var(--main-background-image);
+    background-size: 100vw;
+    background-repeat: repeat-y;
+    color: var(--main-text-color);
+}
+
+.background-filter {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: var(--main-background-filter);
+    -webkit-backdrop-filter: var(--main-background-filter);
+}
+
+a {
+    color: var(--link-text-color);
+}
+
+a:visited {
+    color: var(--contrast-text-color);
+}
+
 .header {
     margin: 2rem 7rem 3rem;
     border: 0.75rem solid var(--header-bg-color);
@@ -13,8 +48,11 @@
 
 .footer {
     margin-top: 2rem;
-    color: var(--prime-text-color);
     margin-bottom: 1rem;
+}
+
+.footer .menu-item-link {
+    color: var(--header-text-color);
 }
 
 .topnav {
@@ -30,9 +68,9 @@
 
 .banner,
 .banner:active,
-.menu-item-link,
+.header .menu-item-link,
 .language-item-link {
-    color: var(--prime-text-color);
+    color: var(--header-text-color);
 }
 
 .banner-icon {
