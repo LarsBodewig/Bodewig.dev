@@ -27,6 +27,8 @@
         <meta name="description" content="{{ description }}">
     {%- endif -%}
     <link rel="preload" href="{{ 'icon.svg' | asset }}" as="image">
+    <link rel="preload" href="{{ 'adwaita-l.webp' | asset }}" as="image">
+    <link rel="preload" href="{{ 'adwaita-d.webp' | asset }}" as="image">
     {%- assign localized = collections.all
         | where: 'data.id', colPage.data.id
         | sortBy: 'lang'

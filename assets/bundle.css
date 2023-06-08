@@ -1,6 +1,8 @@
 @import "light.css" not (prefers-color-scheme: dark);
 @import "dark.css" (prefers-color-scheme: dark);
-
 @import "font.css";
+
 @import "frame.css";
+@import "header.css";
+@import "footer.css";
 @import "badge.css";

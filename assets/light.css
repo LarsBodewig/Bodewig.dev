@@ -1,8 +1,7 @@
 :root {
     --body-bg-color: #777;
-
+    --frame-text-color: #000;
     --header-bg-color: #d9ccff;
-    --header-text-color: #000;
     --header-icon-filter-invert: 0%;
 
     --main-background-image: url("/assets/adwaita-l.webp");
@@ -12,10 +11,8 @@
     --main-placeholder-bg-color: #b6a7c8;
     --main-backdrop-bg-color: rgba(255, 255, 255, 0.5);
 
-    --footer-text-color: #fff;
-
     --prime-text-color: #000;
-    --contrast-text-color: #11a20f;
     --link-text-color: #003973;
+    --link-visited-text-color: #551a8b;
     --passive-text-color: #666666;
 }
