@@ -5,7 +5,11 @@
     };
 {% endcomment %}
 
-<a href="#" class="email" data-email="{{ email | encode }}">
+<a
+    href="#"
+    class="link"
+    data-email="{{ email | encode }}"
+>
     {%- if lang == 'Deutsch' -%}
         Bitte aktivieren Sie JavaScript zum Anzeigen der E-Mail-Adresse
     {%- else -%}

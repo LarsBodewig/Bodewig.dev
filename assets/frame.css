@@ -18,11 +18,11 @@ main {
     color: var(--main-text-color);
 }
 
-a {
+.link {
     color: var(--link-text-color);
 }
 
-a:visited {
+.link:visited {
     color: var(--link-visited-text-color);
 }
 

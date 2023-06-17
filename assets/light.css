@@ -2,7 +2,6 @@
     --body-bg-color: #777;
     --frame-text-color: #000;
     --header-bg-color: #d9ccff;
-    --header-icon-filter-invert: 0%;
 
     --main-background-image: url("/assets/adwaita-l.webp");
     --main-background-filter: hue-rotate(340deg) contrast(0.4) saturate(1.5)

@@ -1,4 +1,4 @@
-.header {
+header {
     margin: 2rem 7rem 3rem;
     border: 0.75rem solid var(--header-bg-color);
     border-radius: 2rem;
@@ -11,50 +11,42 @@
     flex-wrap: wrap;
 }
 
-.banner {
+.heading-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    flex-wrap: wrap;
 }
 
-.banner,
-.banner:active,
-.language-item-link {
-    color: var(--frame-text-color);
-}
-
-.banner-icon {
-    height: 1.25rem;
-    width: 1.25rem;
-    margin: 0 0.5rem;
-    filter: invert(var(--header-icon-filter-invert));
-}
-
-.banner-text {
-    border-bottom: 0.1rem solid;
-}
-
-.banner-text,
-.heading {
-    font-size: 1.25rem;
-    font-family: var(--menu-font-family);
+.heading-item {
+    margin: 0.5rem 0 0.5rem 0.75rem;
+    break-inside: avoid;
 }
 
 .heading-divider {
     font-size: 1.75rem;
     font-family: var(--icon-font-family);
-    margin: 0 0.5rem;
+    margin-right: 0.25rem;
 }
 
-.heading-container {
-    display: flex;
-    align-items: center;
-    margin-left: 0.3rem;
+.banner-link,
+.banner-link:active {
+    text-decoration: none;
+    color: var(--frame-text-color);
+}
+
+.banner-text {
+    font-size: 1.25rem;
+    font-family: var(--menu-font-family);
+    text-decoration: underline;
 }
 
 .heading {
+    display: inline;
+    font-size: 1.25rem;
     font-weight: normal;
+    font-family: var(--menu-font-family);
     margin: 0;
 }
 
@@ -67,13 +59,20 @@
     background-color: var(--header-bg-color);
     color: var(--frame-text-color);
     justify-content: end;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+}
+
+.page-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .languages {
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
     row-gap: 0.5rem;
     list-style: none;
     padding-left: 0;
@@ -82,11 +81,16 @@
     border-left-color: var(--prime-text-color);
 }
 
+.language-item {
+    margin: 0 1rem;
+}
+
+.language-item-link,
+.language-item-link:active {
+    color: var(--frame-text-color);
+}
+
 .language-icon {
     height: 0.75rem;
     margin-right: 0.4rem;
-}
-
-.language-item {
-    margin: 0 1rem;
 }

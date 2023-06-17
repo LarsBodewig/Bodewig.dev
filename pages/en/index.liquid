@@ -23,6 +23,7 @@ lang: en-GB
                     corporate environment continuously since 2017. My complete
                     CV is available on
                     <a
+                        class="link"
                         href="https://www.linkedin.com/in/larsbodewig/"
                         rel="noreferrer external"
                         >LinkedIn</a
@@ -44,7 +45,12 @@ lang: en-GB
                     I am most efficient in Backend or Full Stack Development,
                     but also interested in Pipeline Engineering, Library
                     Development and Language Parsing. My
-                    <a href="{{ portfolioUrl }}" rel="noreferrer">Portfolio</a>
+                    <a
+                        class="link"
+                        href="{{ portfolioUrl }}"
+                        rel="noreferrer"
+                        >Portfolio</a
+                    >
                     features a selection of projects showcasing my skills.
                 </p>
                 <p>
@@ -54,7 +60,12 @@ lang: en-GB
                     -%}
                     {%- assign contactUrl = contact[0].url | url -%}
                     If you want to reach out to me, see
-                    <a href="{{ contactUrl }}" rel="noreferrer">Contact</a>.
+                    <a
+                        class="link"
+                        href="{{ contactUrl }}"
+                        rel="noreferrer"
+                        >Contact</a
+                    >.
                 </p>
             </div>
         </main>

@@ -1,6 +1,6 @@
 function setEmail() {
-    const elements = document.getElementsByClassName("email");
-    Array.from(elements).forEach(element => {
+    const elements = document.querySelectorAll("[data-email]");
+    elements.forEach(element => {
         const encoded = element.dataset.email;
         const value = encoded.split(/(\w\w)/g)
             .filter(p => !!p)
