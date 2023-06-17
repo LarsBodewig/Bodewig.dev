@@ -13,4 +13,6 @@
     --link-text-color: #4e95ff;
     --link-visited-text-color: #70a424;
     --passive-text-color: #aeaeae;
+
+    --project-link-icon-filter: invert(1);
 }
