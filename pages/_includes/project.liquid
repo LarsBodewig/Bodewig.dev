@@ -1,26 +1,49 @@
 {% comment %}
     name: string;
     subtitle?: string;
-    href?: string;
     description: string;
+    github?: string;
+    maven?: string;
 {% endcomment %}
 
 <div>
     <div class="project-header">
-        {%- if href -%}
-            <a
-                href="{{ href }}"
-                class="link project-name"
-                rel="noreferrer external"
-            >
-                {{- name -}}
-            </a>
-        {%- else -%}
-            <span class="project-name">{{ name }}</span>
-        {%- endif -%}
+        <h3 class="project-name">{{ name }}</h3>
         {%- if subtitle -%}
             <span class="project-subtitle"> {{ subtitle }}</span>
         {%- endif -%}
     </div>
     <p class="project-desc">{{ description }}</p>
+    <div class="project-links">
+        {%- if github -%}
+            <a
+                href="{{ github }}"
+                class="project-link link"
+                rel="noreferrer external"
+            >
+                <img
+                    alt="Github"
+                    class="project-link-icon"
+                    src="{{ 'github.svg' | asset }}"
+                    width="20"
+                    height="20"
+                >
+            </a>
+        {%- endif -%}
+        {%- if maven -%}
+            <a
+                href="{{ maven }}"
+                class="project-link link"
+                rel="noreferrer external"
+            >
+                <img
+                    alt="Maven Central"
+                    class="project-link-icon"
+                    src="{{ 'maven.svg' | asset }}"
+                    width="20"
+                    height="20"
+                >
+            </a>
+        {%- endif -%}
+    </div>
 </div>
