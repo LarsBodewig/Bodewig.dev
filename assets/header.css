@@ -1,5 +1,5 @@
 header {
-    margin: 2rem 7rem 3rem;
+    margin: 2rem 10vw 3rem;
     border: 0.75rem solid var(--header-bg-color);
     border-radius: 2rem;
     background-color: var(--header-bg-color);
@@ -58,13 +58,7 @@ header {
     padding: 0.25rem 0;
     background-color: var(--header-bg-color);
     color: var(--frame-text-color);
-    justify-content: end;
-    flex-wrap: wrap;
-}
-
-.page-links {
-    display: flex;
-    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
