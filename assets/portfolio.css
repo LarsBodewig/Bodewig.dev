@@ -4,7 +4,7 @@
 
 .portfolio-projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
     grid-gap: 1rem;
 }
 
@@ -19,20 +19,21 @@
     flex-basis: 15rem;
 }
 
-.project-desc {
-    margin-bottom: 0;
-}
-
 .project-name {
     display: inline-block;
     margin: 0;
     line-height: 1.2;
+    font-size: 1.2rem;
 }
 
 .project-subtitle {
     display: inline-block;
     font-style: italic;
     color: var(--passive-text-color);
+}
+
+.project-desc {
+    margin-bottom: 0;
 }
 
 .project-links {

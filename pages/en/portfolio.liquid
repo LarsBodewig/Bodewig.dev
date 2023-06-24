@@ -37,14 +37,23 @@ lang: en-GB
                     </p>
                 </div>
                 <div class="portfolio-projects">
+                    {%- assign skills = 'Java', 'Maven' -%}
+                    {%-
+                        include 'project',
+                        name: 'Sql-ResultSet-Interfaces',
+                        description: 'A small Maven dependency mostly aimed at frameworks to enhance APIs with specialized java.sql.ResultSet interfaces. It offers to select a subset of the ResultSet interface's methods for simple operations or make use of custom interfaces that map to ResultSet.',
+                        github: 'https://github.com/LarsBodewig/Sql-ResultSet-Interfaces',
+                        maven: 'https://central.sonatype.com/artifact/dev.bodewig.sql-resultset-interfaces/sql-resultset-interfaces',
+                        skills: skills
+                    -%}
                     {%-
                         assign skills = 'Java', 'TypeScript',
-                        'JavaScript', 'SQL', 'Redux', 'HTML',
-                        'CSS', 'Maven', 'yarn'
+                        'JavaScript', 'SQL/Oracle', 'Redux', 'HTML',
+                        'CSS', 'Maven', 'Flyway', 'NetWeaver', 'yarn'
                     -%}
                     {%- include 'project',
                         name: 'Professional project',
-                        description: '2.5+ years full stack development of a public government website including data aggregation, transformation and visualization from multiple data sources and a comprehensive search function.',
+                        description: '3 years full stack development of a public government website including data aggregation, transformation and visualization from multiple data sources and a comprehensive search function.',
                         skills: skills
                     -%}
                     {%- assign skills = 'JavaScript', '11ty', 'HTML', 'CSS', 'npm', 'CI' -%}
