@@ -39,6 +39,18 @@ lang: de-DE
                     </p>
                 </div>
                 <div class="portfolio-projects">
+                    {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
+                    {%- include 'project',
+                        name: 'Berufliches Projekt',
+                        description: 'Entwicklung in einem öffentlichen Projekt des Bundes: Mitarbeit bei der Migration des Frontend-Frameworks im laufenden Betrieb und Wartung von Legacy-Code.',
+                        skills: skills
+                    -%}
+                    {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
+                    {%- include 'project',
+                        name: 'Berufliches Projekt',
+                        description: 'Design and Implementierung einer neuen Schnittstelle für einen globalen Versicherungskonzern.',
+                        skills: skills
+                    -%}
                     {%- assign skills = 'Java', 'Maven' -%}
                     {%- include 'project',
                         name: 'Sql-ResultSet-Interfaces',
@@ -50,7 +62,7 @@ lang: de-DE
                     {%-
                         assign skills = 'Java', 'TypeScript',
                         'JavaScript', 'SQL/Oracle', 'Redux', 'HTML',
-                        'CSS', 'Maven', 'Flyway', 'NetWeaver', 'yarn'
+                        'CSS', 'Maven', 'yarn', 'Flyway', 'NetWeaver'
                     -%}
                     {%- include 'project',
                         name: 'Berufliches Projekt',
