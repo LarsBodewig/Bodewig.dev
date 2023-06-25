@@ -37,11 +37,23 @@ lang: en-GB
                     </p>
                 </div>
                 <div class="portfolio-projects">
+                    {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
+                    {%- include 'project',
+                        name: 'Professional project',
+                        description: 'Development in a monolithic government project: Participation in migrating the frontend framework in-place and maintenance of legacy code.',
+                        skills: skills
+                    -%}
+                    {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
+                    {%- include 'project',
+                        name: 'Professional project',
+                        description: 'Design and implementation of a new API service for a globally operating insurance company.',
+                        skills: skills
+                    -%}
                     {%- assign skills = 'Java', 'Maven' -%}
                     {%-
                         include 'project',
                         name: 'Sql-ResultSet-Interfaces',
-                        description: 'A small Maven dependency mostly aimed at frameworks to enhance APIs with specialized java.sql.ResultSet interfaces. It offers to select a subset of the ResultSet interface's methods for simple operations or make use of custom interfaces that map to ResultSet.',
+                        description: 'A small Maven dependency mostly aimed at frameworks to enhance APIs with specialized java.sql.ResultSet interfaces. It offers to select a subset of the ResultSet interface\'s methods for simple operations or make use of custom interfaces that map to ResultSet.',
                         github: 'https://github.com/LarsBodewig/Sql-ResultSet-Interfaces',
                         maven: 'https://central.sonatype.com/artifact/dev.bodewig.sql-resultset-interfaces/sql-resultset-interfaces',
                         skills: skills
@@ -49,7 +61,7 @@ lang: en-GB
                     {%-
                         assign skills = 'Java', 'TypeScript',
                         'JavaScript', 'SQL/Oracle', 'Redux', 'HTML',
-                        'CSS', 'Maven', 'Flyway', 'NetWeaver', 'yarn'
+                        'CSS', 'Maven', 'yarn', 'Flyway', 'NetWeaver'
                     -%}
                     {%- include 'project',
                         name: 'Professional project',
