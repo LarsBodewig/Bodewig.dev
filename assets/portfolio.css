@@ -2,9 +2,21 @@
     margin-bottom: 2rem;
 }
 
-.portfolio-table th,
-.portfolio-table td {
-    padding: 0.5rem;
+.portfolio-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.project {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    border: 0.1rem solid var(--main-text-color);
+    background-color: var(--main-backdrop-bg-color);
+    color: var(--main-text-color);
+    border-radius: 1rem;
+    flex-basis: 15rem;
 }
 
 .project-desc {
@@ -14,6 +26,7 @@
 .project-name {
     display: inline-block;
     margin: 0;
+    line-height: 1.2;
 }
 
 .project-subtitle {
@@ -23,7 +36,8 @@
 }
 
 .project-links {
-    margin-top: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
 
 .project-link {
@@ -38,42 +52,9 @@
     filter: var(--project-link-icon-filter);
 }
 
-.skill-badges {
+.project-skills {
+    margin-top: 0.75rem;
     display: flex;
-    justify-content: center;
+    gap: 0.5rem;
     flex-wrap: wrap;
-    gap: 0.75rem 0.5rem;
-}
-
-.portfolio-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    overflow: hidden;
-}
-.portfolio-thead {
-    margin: 0;
-}
-
-.portfolio-table th,
-.portfolio-table td {
-    padding: 1rem;
-    border: 0.1rem solid var(--main-text-color);
-    background-color: var(--main-backdrop-bg-color);
-    color: var(--main-text-color);
-}
-
-.portfolio-table tr:first-child th:first-child {
-    border-top-left-radius: 1rem;
-}
-
-.portfolio-table tr:first-child th:last-child {
-    border-top-right-radius: 1rem;
-}
-
-.portfolio-table tr:last-child td:first-child {
-    border-bottom-left-radius: 1rem;
-}
-
-.portfolio-table tr:last-child td:last-child {
-    border-bottom-right-radius: 1rem;
 }

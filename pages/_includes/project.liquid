@@ -4,15 +4,14 @@
     description: string;
     github?: string;
     maven?: string;
+    skills: string[];
 {% endcomment %}
 
-<div>
-    <div class="project-header">
-        <h3 class="project-name">{{ name }}</h3>
-        {%- if subtitle -%}
-            <span class="project-subtitle"> {{ subtitle }}</span>
-        {%- endif -%}
-    </div>
+<div class="project">
+    <h3 class="project-name">{{ name }}</h3>
+    {%- if subtitle -%}
+        <span class="project-subtitle"> {{ subtitle }}</span>
+    {%- endif -%}
     <p class="project-desc">{{ description }}</p>
     <div class="project-links">
         {%- if github -%}
@@ -45,5 +44,10 @@
                 >
             </a>
         {%- endif -%}
+    </div>
+    <div class="project-skills">
+        {% for skill in skills %}
+            {% include 'badge', label: skill %}
+        {% endfor %}
     </div>
 </div>
