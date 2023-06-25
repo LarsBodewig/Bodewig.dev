@@ -30,6 +30,10 @@ module.exports = function (eleventyConfig) {
             'from': (elem, collection) =>
                 collection.find(item => item.url === elem.url),
             'in': (field, obj) => field in obj,
+            ",": (a, b) => [
+                ...(Array.isArray(a) ? a : [a]),
+                ...(Array.isArray(b) ? b : [b])
+            ],
         },
         strictVariables: true,
         lenientIf: true,
