@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     address: {
         name: "Lars Bodewig",
         careOf: "c/o Block Services",

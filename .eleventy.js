@@ -1,9 +1,10 @@
-const config = require("./config");
-const prettier = require("prettier");
-const liquidjs = require('liquidjs');
-const nanomatch = require("nanomatch");
+import config from "./config.js";
+import { format } from "prettier";
+import { defaultOperators } from 'liquidjs';
+import nanomatch from "nanomatch";
+import prettierXml from "@prettier/plugin-xml";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     Object.entries(config).forEach(([key, value]) =>
         eleventyConfig.addGlobalData(key, value));
 
@@ -22,7 +23,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setLiquidOptions({
         ...config.liquid,
         operators: {
-            ...liquidjs.defaultOperators,
+            ...defaultOperators,
             '+': (a, b) => a + b,
             'mod': (a, b) => a % b,
             'inCol': (elem, collection) =>
@@ -101,15 +102,16 @@ module.exports = function (eleventyConfig) {
         });
         return colCopy;
     });
-    eleventyConfig.addTransform("prettier", (content, outputPath) => {
+    eleventyConfig.addTransform("prettier", async (content, outputPath) => {
         const excluded = nanomatch(outputPath, config.prettierExclude);
         if (excluded.length) { // empty if outputPath is not excluded
             return content.trimStart();
         }
         const text = content.trim(); // prettier fails on leading newline
-        return prettier.format(text, {
+        return await format(text, {
             ...config.prettier,
             filepath: outputPath,
+            plugins: [prettierXml]
         });
     });
 
