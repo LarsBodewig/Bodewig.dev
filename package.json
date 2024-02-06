@@ -4,14 +4,15 @@
     "authors": "LarsBodewig",
     "version": "1.0.0",
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.0",
-        "@prettier/plugin-xml": "^2.2.0",
-        "@shopify/prettier-plugin-liquid": "^0.4.0",
+        "@11ty/eleventy": "^3.0.0-alpha.4",
+        "@prettier/plugin-xml": "^3.2.2",
+        "@shopify/prettier-plugin-liquid": "^1.4.1",
         "nanomatch": "^1.2.13",
-        "prettier": "^2.7.1"
+        "prettier": "^3.2.5"
     },
     "private": true,
     "license": "private",
+    "type": "module",
     "scripts": {
         "build": "eleventy",
         "serve": "eleventy --serve"
