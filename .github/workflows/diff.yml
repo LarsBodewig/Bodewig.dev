@@ -10,12 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: (main) Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: main
     - name: (main) Setup Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
+        node-version-file: 'package.json'
         cache: 'npm'
     - name: (main) Install npm
       run: npm ci
@@ -24,10 +25,11 @@ jobs:
     - name: (main) Move build
       run: mv build ${{ runner.temp }}/build_main
     - name: (HEAD) Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: (HEAD) Setup Node
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
+        node-version-file: 'package.json'
         cache: 'npm'
     - name: (HEAD) Install npm
       run: npm ci

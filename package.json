@@ -16,5 +16,8 @@
     "scripts": {
         "build": "eleventy",
         "serve": "eleventy --serve"
+    },
+    "engines": {
+        "node": ">=20.0.0"
     }
 }
