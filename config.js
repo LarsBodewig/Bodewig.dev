@@ -7,7 +7,7 @@ export default {
         email: "info@bodewig.dev",
     },
     defaultLanguage: "de-DE",
-    eleventy: {
+    eleventyConfig: {
         dir: {
             input: "pages",
             output: "build",

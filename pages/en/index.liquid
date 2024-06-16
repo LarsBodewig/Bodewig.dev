@@ -4,7 +4,7 @@ title: Lars Bodewig
 description: Welcome to my personal website. My name is Lars Bodewig. I am a Software Developer from Germany.
 lang: en-GB
 ---
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ lang }}">
     {% include 'head' %}
 
@@ -14,57 +14,50 @@ lang: en-GB
         <main>
             <div class="background-filter">
                 <h2 class="index-heading">Greetings!</h2>
+                <p>Welcome to my personal website.</p>
                 <p>
-                    Welcome to my personal website. My name is Lars Bodewig. I
-                    am a Software Developer from Germany.
+                    My name is Lars Bodewig. I mostly work as a Backend or Full Stack Developer, but I am also
+                    interested in Pipeline Engineering, Library Development and Language Parsing. My biggest strengths
+                    are
+                    {% include 'badge', label: 'Java' %}, {% include 'badge', label: 'TypeScript' %} and
+                    {% include 'badge', label: 'Maven' %}. My
+                    {%- assign portfolio = collections.all
+                        | where: 'data.id', 'portfolio'
+                        | where: 'data.lang', colPage.data.lang
+                        | first
+                    %}
+                    <a
+                        class="link"
+                        href="{{ portfolio.url | url }}"
+                        rel="noreferrer"
+                    >
+                        {{- portfolio.data.title -}}
+                    </a>
+                    features a selection of projects showcasing my skills.
                 </p>
                 <p>
-                    I started developing in 2014 and have been developing in a
-                    corporate environment continuously since 2017. My complete
-                    CV is available on
+                    My complete CV is available on
                     <a
                         class="link"
                         href="https://www.linkedin.com/in/larsbodewig/"
                         rel="noreferrer external"
                         >LinkedIn</a
-                    >.
-                </p>
-                <p>
-                    Within that time I gained experience in working in different
-                    teams, technology stacks, programming languages and
-                    products. My biggest strengths are
-                    {% include 'badge', label: 'Java' %},
-                    {% include 'badge', label: 'TypeScript' %} and
-                    {% include 'badge', label: 'SQL' %}.<br>
-
-                    {%- assign portfolio = collections.all
-                        | where: 'data.id', 'portfolio'
-                        | where: 'data.lang', colPage.data.lang
-                    -%}
-                    {%- assign portfolioUrl = portfolio[0].url | url -%}
-                    I am most efficient in Backend or Full Stack Development,
-                    but also interested in Pipeline Engineering, Library
-                    Development and Language Parsing. My
-                    <a
-                        class="link"
-                        href="{{ portfolioUrl }}"
-                        rel="noreferrer"
-                        >Portfolio</a
                     >
-                    features a selection of projects showcasing my skills.
+                    (Login required).
                 </p>
                 <p>
+                    If you want to reach out to me, see
                     {%- assign contact = collections.all
                         | where: 'data.id', 'contact'
                         | where: 'data.lang', colPage.data.lang
-                    -%}
-                    {%- assign contactUrl = contact[0].url | url -%}
-                    If you want to reach out to me, see
+                        | first
+                    %}
                     <a
                         class="link"
-                        href="{{ contactUrl }}"
+                        href="{{ contact.url | url }}"
                         rel="noreferrer"
-                        >Contact</a
+                    >
+                        {{- contact.data.title -}}</a
                     >.
                 </p>
             </div>
