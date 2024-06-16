@@ -12,55 +12,52 @@ lang: en-GB
         {% include 'header' %}
 
         <main>
-            <div class="background-filter">
-                <h2 class="index-heading">Greetings!</h2>
-                <p>Welcome to my personal website.</p>
-                <p>
-                    My name is Lars Bodewig. I mostly work as a Backend or Full Stack Developer, but I am also
-                    interested in Pipeline Engineering, Library Development and Language Parsing. My biggest strengths
-                    are
-                    {% include 'badge', label: 'Java' %}, {% include 'badge', label: 'TypeScript' %} and
-                    {% include 'badge', label: 'Maven' %}. My
-                    {%- assign portfolio = collections.all
-                        | where: 'data.id', 'portfolio'
-                        | where: 'data.lang', colPage.data.lang
-                        | first
-                    %}
-                    <a
-                        class="link"
-                        href="{{ portfolio.url | url }}"
-                        rel="noreferrer"
-                    >
-                        {{- portfolio.data.title -}}
-                    </a>
-                    features a selection of projects showcasing my skills.
-                </p>
-                <p>
-                    My complete CV is available on
-                    <a
-                        class="link"
-                        href="https://www.linkedin.com/in/larsbodewig/"
-                        rel="noreferrer external"
-                        >LinkedIn</a
-                    >
-                    (Login required).
-                </p>
-                <p>
-                    If you want to reach out to me, see
-                    {%- assign contact = collections.all
-                        | where: 'data.id', 'contact'
-                        | where: 'data.lang', colPage.data.lang
-                        | first
-                    %}
-                    <a
-                        class="link"
-                        href="{{ contact.url | url }}"
-                        rel="noreferrer"
-                    >
-                        {{- contact.data.title -}}</a
-                    >.
-                </p>
-            </div>
+            <h2 class="index-heading">Greetings!</h2>
+            <p>Welcome to my personal website.</p>
+            <p>
+                My name is Lars Bodewig. I mostly work as a Backend or Full Stack Developer, but I am also interested in
+                Pipeline Engineering, Library Development and Language Parsing. My biggest strengths are
+                {% include 'badge', label: 'Java' %}, {% include 'badge', label: 'TypeScript' %} and
+                {% include 'badge', label: 'Maven' %}. My
+                {%- assign portfolio = collections.all
+                    | where: 'data.id', 'portfolio'
+                    | where: 'data.lang', colPage.data.lang
+                    | first
+                %}
+                <a
+                    class="link"
+                    href="{{ portfolio.url | url }}"
+                    rel="noreferrer"
+                >
+                    {{- portfolio.data.title -}}
+                </a>
+                features a selection of projects showcasing my skills.
+            </p>
+            <p>
+                My complete CV is available on
+                <a
+                    class="link"
+                    href="https://www.linkedin.com/in/larsbodewig/"
+                    rel="noreferrer external"
+                    >LinkedIn</a
+                >
+                (Login required).
+            </p>
+            <p>
+                If you want to reach out to me, see
+                {%- assign contact = collections.all
+                    | where: 'data.id', 'contact'
+                    | where: 'data.lang', colPage.data.lang
+                    | first
+                %}
+                <a
+                    class="link"
+                    href="{{ contact.url | url }}"
+                    rel="noreferrer"
+                >
+                    {{- contact.data.title -}}</a
+                >.
+            </p>
         </main>
 
         {% include 'footer' %}
