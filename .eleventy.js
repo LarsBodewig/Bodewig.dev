@@ -115,5 +115,5 @@ export default function (eleventyConfig) {
         });
     });
 
-    return config.eleventy;
+    return config.eleventyConfig;
 };
