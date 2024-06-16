@@ -1,12 +1,10 @@
 :root {
-    --body-bg-color: #181818;
+    --frame-placeholder-bg-color: #3c2360;
+    --frame-bg-image: url("/assets/adwaita-d.webp");
     --frame-text-color: #fff;
-    --header-bg-color: #444;
 
-    --main-background-image: url("/assets/adwaita-d.webp");
-    --main-background-filter: none;
+    --main-bg-color: #444;
     --main-text-color: #fff;
-    --main-placeholder-bg-color: #3c2360;
     --main-backdrop-bg-color: rgba(0, 0, 0, 0.6);
 
     --prime-text-color: #fff;

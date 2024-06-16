@@ -1,21 +1,26 @@
+html {
+    background-color: var(--frame-placeholder-bg-color);
+    background: var(--frame-bg-image);
+    background-size: 100vw;
+    background-repeat: repeat-y;
+}
+
 body {
     font-size: 1rem;
     margin: 0;
     font-family: var(--main-font-family);
-    background-color: var(--body-bg-color);
-    line-height: 1.2rem;
+    line-height: 1.5rem;
     padding: 1vw;
 }
 
 main {
     margin: 1.5rem 1vw;
     border-radius: 1rem;
-    background-color: var(--main-placeholder-bg-color);
-    box-shadow: 0 0 15px black;
-    background: var(--main-background-image);
-    background-size: 100vw;
-    background-repeat: repeat-y;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     color: var(--main-text-color);
+    padding: 0.5rem min(1.5rem, 5vw) 1.5rem;
+    border-radius: 1rem;
 }
 
 .link {
@@ -24,13 +29,6 @@ main {
 
 .link:visited {
     color: var(--link-visited-text-color);
-}
-
-.background-filter {
-    padding: 1.5rem min(1.5rem, 5vw);
-    border-radius: 1rem;
-    backdrop-filter: var(--main-background-filter);
-    -webkit-backdrop-filter: var(--main-background-filter);
 }
 
 .menu {

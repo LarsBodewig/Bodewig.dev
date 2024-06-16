@@ -13,33 +13,31 @@ lang: en-GB
         {% include 'header' %}
 
         <main>
-            <div class="background-filter">
-                <p>If you wish to contact me, you can use any of the following channels:</p>
-                <ul>
-                    <li class="contact-channel">
-                        For business inquiries:
-                        <a
-                            class="link"
-                            href="https://www.linkedin.com/in/larsbodewig/"
-                            rel="noreferrer external"
-                            >LinkedIn/LarsBodewig</a
-                        >
-                    </li>
-                    <li class="contact-channel">
-                        Everything code related:
-                        <a
-                            class="link"
-                            href="https://github.com/LarsBodewig"
-                            rel="noreferrer external"
-                            >GitHub/LarsBodewig</a
-                        >
-                    </li>
-                    <li class="contact-channel">
-                        For any other subject:
-                        {% include 'email', email: 'Lars@Bodewig.dev' %}
-                    </li>
-                </ul>
-            </div>
+            <p>If you wish to contact me, you can use any of the following channels:</p>
+            <ul>
+                <li class="contact-channel">
+                    For business inquiries:
+                    <a
+                        class="link"
+                        href="https://www.linkedin.com/in/larsbodewig/"
+                        rel="noreferrer external"
+                        >LinkedIn/LarsBodewig</a
+                    >
+                </li>
+                <li class="contact-channel">
+                    Everything code related:
+                    <a
+                        class="link"
+                        href="https://github.com/LarsBodewig"
+                        rel="noreferrer external"
+                        >GitHub/LarsBodewig</a
+                    >
+                </li>
+                <li class="contact-channel">
+                    For any other subject:
+                    {% include 'email', email: 'Lars@Bodewig.dev' %}
+                </li>
+            </ul>
         </main>
 
         {% include 'footer' %}

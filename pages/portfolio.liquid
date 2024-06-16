@@ -13,95 +13,93 @@ lang: de-DE
         {% include 'header' %}
 
         <main>
-            <div class="background-filter">
-                <div class="portfolio-desc">
-                    <p>
-                        Diese Seite enthält eine Auflistung nennenswerter Projekte an denen ich beruflich oder privat
-                        gearbeitet habe. Alle meine privaten Projekte sind öffentlich einsehbar auf
-                        <a
-                            class="link"
-                            href="https://github.com/LarsBodewig"
-                            rel="noreferrer external"
-                            >Github</a
-                        >.
-                    </p>
-                    <p>
-                        Jedes Element enthält eine Auswahl relevanter Skills in Programmiersprachen, Frameworks und
-                        Werkzeugen. Da Projekte in ihrer Komplexität variieren, Technologien sich gegenseitig bedingen
-                        und Werkzeuge ausgetauscht werden können, ist diese Auswahl nicht abschließend vollständig.
-                        Jedoch stellt sie einen Schwerpunkt der gewonnenen Erfahrung und des Wissens durch die Arbeit in
-                        dem jeweiligen Projekt dar.
-                    </p>
-                </div>
-                <div class="portfolio-projects">
-                    {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
-                    {%- include 'project',
-                        name: 'Berufliches Projekt',
-                        description: 'Entwicklung in einem öffentlichen Projekt des Bundes: Mitarbeit bei der Migration des Frontend-Frameworks im laufenden Betrieb und Wartung von Legacy-Code.',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
-                    {%- include 'project',
-                        name: 'Berufliches Projekt',
-                        description: 'Design and Implementierung einer neuen Schnittstelle für einen globalen Versicherungskonzern.',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'Java', 'Maven' -%}
-                    {%- include 'project',
-                        name: 'Sql-ResultSet-Interfaces',
-                        description: 'Maven Dependency für spezialisierte Subsets des java.sql.ResultSet-Interface. Diese Dependency richtet sich hauptsächlich an Frameworks, die ihre APIs mit schlanken Interfaces einfacher gestalten wollen.',
-                        github: 'https://github.com/LarsBodewig/Sql-ResultSet-Interfaces',
-                        maven: 'https://central.sonatype.com/artifact/dev.bodewig.sql-resultset-interfaces/sql-resultset-interfaces',
-                        skills: skills
-                    -%}
-                    {%-
-                        assign skills = 'Java', 'TypeScript',
-                        'JavaScript', 'SQL/Oracle', 'Redux', 'HTML',
-                        'CSS', 'Maven', 'yarn', 'Flyway', 'NetWeaver'
-                    -%}
-                    {%- include 'project',
-                        name: 'Berufliches Projekt',
-                        description: '3 Jahre Full-Stack-Development an einer öffentlichen Internetseite der Landesregierung, inklusive Daten-Aggregation, -Transformation, -Visualisierung und einer umfassenden Suchfunktion.',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'JavaScript', '11ty', 'HTML', 'CSS', 'npm', 'CI' -%}
-                    {%- include 'project',
-                        name: 'Bodewig.dev',
-                        subtitle: '(Ja, diese Webseite!)',
-                        description: 'Eine mit 11ty generierte, statische, mehrsprachige Webseite, die liquid als Template-Sprache verwendet.',
-                        github: 'https://github.com/LarsBodewig/Bodewig.dev',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'Java', 'Maven' -%}
-                    {%- include 'project',
-                        name: 'JPath-Filter',
-                        description: 'Ein Java Servlet-Filter für JSON-Servlets um Teile der Daten mittels JsonPath abzufragen, dem Äquivalent zu XPath für XML.',
-                        github: 'https://github.com/LarsBodewig/JPath-Filter',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm', '*nix' -%}
-                    {%- include 'project',
-                        name: 'Web-Shell',
-                        subtitle: '- Eine im Browser simulierte Bash',
-                        description: 'Website mit Bash Look-and-Feel zur Simulation simpler *nix-Befehle.',
-                        github: 'https://github.com/LarsBodewig/Web-Shell',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm' -%}
-                    {%- include 'project',
-                        name: 'Visual-killedbygoogle',
-                        description: 'Visualisierung von Killed by Google, dem Google-Friedhof; einer open-source Sammlung aller nicht mehr verfügbaren Google Services, Produkte, Geräte und Apps.',
-                        github: 'https://github.com/LarsBodewig/Visual-killedbygoogle',
-                        skills: skills
-                    -%}
-                    {%- assign skills = 'Java', 'ANTLR' -%}
-                    {%- include 'project',
-                        name: 'Bachelor-Arbeit über die Implementierung und Visualisierung von Wahrheitsbäumen',
-                        description: 'Wahrheitsbäume sind eine Methode der Logik zum Lösen logischer Aussagen durch die Prüfung auf Widersprüche zwischen einzelnen Termen. Diese Anwendung interpretiert eine logische Aussage als Konsolen-Eingabe, bricht sie in einzelne Terme, erzeugt daraus einen Wahrheitsbaum und stellt diesen grafisch dar.',
-                        github: 'https://github.com/LarsBodewig/HS-Bachelor',
-                        skills: skills
-                    -%}
-                </div>
+            <div class="portfolio-desc">
+                <p>
+                    Diese Seite enthält eine Auflistung nennenswerter Projekte an denen ich beruflich oder privat
+                    gearbeitet habe. Alle meine privaten Projekte sind öffentlich einsehbar auf
+                    <a
+                        class="link"
+                        href="https://github.com/LarsBodewig"
+                        rel="noreferrer external"
+                        >Github</a
+                    >.
+                </p>
+                <p>
+                    Jedes Element enthält eine Auswahl relevanter Skills in Programmiersprachen, Frameworks und
+                    Werkzeugen. Da Projekte in ihrer Komplexität variieren, Technologien sich gegenseitig bedingen und
+                    Werkzeuge ausgetauscht werden können, ist diese Auswahl nicht abschließend vollständig. Jedoch
+                    stellt sie einen Schwerpunkt der gewonnenen Erfahrung und des Wissens durch die Arbeit in dem
+                    jeweiligen Projekt dar.
+                </p>
+            </div>
+            <div class="portfolio-projects">
+                {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
+                {%- include 'project',
+                    name: 'Berufliches Projekt',
+                    description: 'Entwicklung in einem öffentlichen Projekt des Bundes: Mitarbeit bei der Migration des Frontend-Frameworks im laufenden Betrieb und Wartung von Legacy-Code.',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
+                {%- include 'project',
+                    name: 'Berufliches Projekt',
+                    description: 'Design and Implementierung einer neuen Schnittstelle für einen globalen Versicherungskonzern.',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Maven' -%}
+                {%- include 'project',
+                    name: 'Sql-ResultSet-Interfaces',
+                    description: 'Maven Dependency für spezialisierte Subsets des java.sql.ResultSet-Interface. Diese Dependency richtet sich hauptsächlich an Frameworks, die ihre APIs mit schlanken Interfaces einfacher gestalten wollen.',
+                    github: 'https://github.com/LarsBodewig/Sql-ResultSet-Interfaces',
+                    maven: 'https://central.sonatype.com/artifact/dev.bodewig.sql-resultset-interfaces/sql-resultset-interfaces',
+                    skills: skills
+                -%}
+                {%-
+                    assign skills = 'Java', 'TypeScript',
+                    'JavaScript', 'SQL/Oracle', 'Redux', 'HTML',
+                    'CSS', 'Maven', 'yarn', 'Flyway', 'NetWeaver'
+                -%}
+                {%- include 'project',
+                    name: 'Berufliches Projekt',
+                    description: '3 Jahre Full-Stack-Development an einer öffentlichen Internetseite der Landesregierung, inklusive Daten-Aggregation, -Transformation, -Visualisierung und einer umfassenden Suchfunktion.',
+                    skills: skills
+                -%}
+                {%- assign skills = 'JavaScript', '11ty', 'HTML', 'CSS', 'npm', 'CI' -%}
+                {%- include 'project',
+                    name: 'Bodewig.dev',
+                    subtitle: '(Ja, diese Webseite!)',
+                    description: 'Eine mit 11ty generierte, statische, mehrsprachige Webseite, die liquid als Template-Sprache verwendet.',
+                    github: 'https://github.com/LarsBodewig/Bodewig.dev',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Maven' -%}
+                {%- include 'project',
+                    name: 'JPath-Filter',
+                    description: 'Ein Java Servlet-Filter für JSON-Servlets um Teile der Daten mittels JsonPath abzufragen, dem Äquivalent zu XPath für XML.',
+                    github: 'https://github.com/LarsBodewig/JPath-Filter',
+                    skills: skills
+                -%}
+                {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm', '*nix' -%}
+                {%- include 'project',
+                    name: 'Web-Shell',
+                    subtitle: '- Eine im Browser simulierte Bash',
+                    description: 'Website mit Bash Look-and-Feel zur Simulation simpler *nix-Befehle.',
+                    github: 'https://github.com/LarsBodewig/Web-Shell',
+                    skills: skills
+                -%}
+                {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm' -%}
+                {%- include 'project',
+                    name: 'Visual-killedbygoogle',
+                    description: 'Visualisierung von Killed by Google, dem Google-Friedhof; einer open-source Sammlung aller nicht mehr verfügbaren Google Services, Produkte, Geräte und Apps.',
+                    github: 'https://github.com/LarsBodewig/Visual-killedbygoogle',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'ANTLR' -%}
+                {%- include 'project',
+                    name: 'Bachelor-Arbeit über die Implementierung und Visualisierung von Wahrheitsbäumen',
+                    description: 'Wahrheitsbäume sind eine Methode der Logik zum Lösen logischer Aussagen durch die Prüfung auf Widersprüche zwischen einzelnen Termen. Diese Anwendung interpretiert eine logische Aussage als Konsolen-Eingabe, bricht sie in einzelne Terme, erzeugt daraus einen Wahrheitsbaum und stellt diesen grafisch dar.',
+                    github: 'https://github.com/LarsBodewig/HS-Bachelor',
+                    skills: skills
+                -%}
             </div>
         </main>
 
