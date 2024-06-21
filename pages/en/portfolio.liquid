@@ -15,7 +15,7 @@ lang: en-GB
         <main>
             <div class="portfolio-desc">
                 <p>
-                    This page lists some note-worthy projects I worked on, including professional and personal projects.
+                    This page lists some noteworthy projects I worked on, including professional and personal projects.
                     All my personal projects are publicly available on
                     <a
                         class="link"
@@ -27,21 +27,44 @@ lang: en-GB
                 <p>
                     Each listing features a selection of important skills in languages, frameworks and tools. Since
                     projects can vary in complexity, technologies may depend on other technologies and tools can change
-                    over time, these selections are neither final nor complete. However they put an emphasis on the
+                    over time, these selections are neither final nor complete. However, they put an emphasis on the
                     knowledge and experience gained from the respective project.
                 </p>
             </div>
             <div class="portfolio-projects">
+                {%- assign skills = 'Docker', 'Maven', 'Jenkins', 'Bashly', '*nix' -%}
+                {%-
+                    include 'project',
+                    name: 'Professional project',
+                    description: 'Maintenance and development of the team\'s own development and test enviroment.',
+                    skills: skills
+                -%}
                 {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
                 {%- include 'project',
                     name: 'Professional project',
-                    description: 'Development in a monolithic government project: Participation in migrating the frontend framework in-place and maintenance of legacy code.',
+                    description: '1.5+ years development of a national government project: Participation in migrating the frontend framework in-place and maintenance of legacy code.',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Maven', 'Gradle', 'JavaPoet' -%}
+                {%- include 'project',
+                    name: 'Mimic',
+                    description: 'Java Annotation Processor, Maven plugin und Gradle plugin to generate type-safe accessors using reflection.',
+                    github: 'https://github.com/LarsBodewig/Mimic',
+                    maven: 'https://central.sonatype.com/namespace/dev.bodewig.mimic',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Hibernate/JPA', 'Maven', 'Flyway' -%}
+                {%- include 'project',
+                    name: 'Hibernate-Based-Migration',
+                    description: 'Conceptual extension of Flyway to do complex migrations of persisted data using Hibernate.',
+                    github: 'https://github.com/LarsBodewig/Hibernate-Based-Migration',
+                    maven: 'https://central.sonatype.com/namespace/dev.bodewig.hibernate-based-migration',
                     skills: skills
                 -%}
                 {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
                 {%- include 'project',
                     name: 'Professional project',
-                    description: 'Design and implementation of a new API service for a globally operating insurance company.',
+                    description: 'Design and implementation of a new API service for a legacy system of a globally operating insurance company.',
                     skills: skills
                 -%}
                 {%- assign skills = 'Java', 'Maven' -%}
@@ -78,12 +101,11 @@ lang: en-GB
                     github: 'https://github.com/LarsBodewig/JPath-Filter',
                     skills: skills
                 -%}
-                {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm', '*nix' -%}
+                {%- assign skills = 'TypeScript', 'HTML', 'CSS', 'npm' -%}
                 {%- include 'project',
-                    name: 'Web-Shell',
-                    subtitle: '- A simulated bash running inside a browser',
-                    description: 'Website with bash look and feel to quickly simulate and assess simple *nix commands.',
-                    github: 'https://github.com/LarsBodewig/Web-Shell',
+                    name: 'ShadowJs',
+                    description: 'A proof of concept to encapsulate JavaScript libraries that pollute the global scope in a separate window context similar to Shadow DOM.',
+                    github: 'https://github.com/LarsBodewig/ShadowJs',
                     skills: skills
                 -%}
                 {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm' -%}
@@ -96,7 +118,7 @@ lang: en-GB
                 {%- assign skills = 'Java', 'ANTLR' -%}
                 {%- include 'project',
                     name: 'Bachelor thesis about implementing and visualizing truth trees',
-                    description: 'Truth trees are a logical method to solve logical expressions by finding contradictions between terms. This is a CLI and GUI application parsing a logical expression as input, breaking in into terms, mapping out a truth tree and visualizing it.',
+                    description: 'Truth trees are a logical method to solve logical expressions by finding contradictions between terms. This is a CLI and GUI application parsing a logical expression as input, breaking it into terms, mapping out a truth tree and visualizing it.',
                     github: 'https://github.com/LarsBodewig/HS-Bachelor',
                     skills: skills
                 -%}

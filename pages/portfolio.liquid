@@ -33,16 +33,38 @@ lang: de-DE
                 </p>
             </div>
             <div class="portfolio-projects">
+                {%- assign skills = 'Docker', 'Maven', 'Jenkins', 'Bashly', '*nix' -%}
+                {%- include 'project',
+                    name: 'Berufliches Projekt',
+                    description: 'Pflege und Weiterentwicklung der Team-eigenen Entwicklungs- und Test-Umgebung.',
+                    skills: skills
+                -%}
                 {%- assign skills = 'Java', 'JSF/JSP', 'Vue.js', 'SQL/Postgres', 'Hibernate/JPA', 'Maven', 'yarn', 'OpenAPI', 'Flyway', 'JBoss', '*nix' -%}
                 {%- include 'project',
                     name: 'Berufliches Projekt',
-                    description: 'Entwicklung in einem öffentlichen Projekt des Bundes: Mitarbeit bei der Migration des Frontend-Frameworks im laufenden Betrieb und Wartung von Legacy-Code.',
+                    description: '1,5+ Jahre Full-Stack-Development in einem öffentlichen Projekt des Bundes: Mitarbeit bei der Migration des Frontend-Frameworks im laufenden Betrieb und Wartung von Legacy-Code.',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Maven', 'Gradle', 'JavaPoet' -%}
+                {%- include 'project',
+                    name: 'Mimic',
+                    description: 'Java Annotation Processor, Maven Plugin und Gradle Plugin zur Generierung typsicherer Accessor-Methoden mittels Reflection.',
+                    github: 'https://github.com/LarsBodewig/Mimic',
+                    maven: 'https://central.sonatype.com/namespace/dev.bodewig.mimic',
+                    skills: skills
+                -%}
+                {%- assign skills = 'Java', 'Hibernate/JPA', 'Maven', 'Flyway' -%}
+                {%- include 'project',
+                    name: 'Hibernate-Based-Migration',
+                    description: 'Konzeptuelle Erweiterung von Flyway zur Durchführung komplexer Migrationen von persistierten Daten mit Hibernate.',
+                    github: 'https://github.com/LarsBodewig/Hibernate-Based-Migration',
+                    maven: 'https://central.sonatype.com/namespace/dev.bodewig.hibernate-based-migration',
                     skills: skills
                 -%}
                 {%- assign skills = 'Java', 'Spring Boot', 'Maven', 'OpenAPI', 'Tomcat', '*nix' -%}
                 {%- include 'project',
                     name: 'Berufliches Projekt',
-                    description: 'Design and Implementierung einer neuen Schnittstelle für einen globalen Versicherungskonzern.',
+                    description: 'Design and Implementierung einer neuen Schnittstelle für ein Bestandsystem eines globalen Versicherungskonzern.',
                     skills: skills
                 -%}
                 {%- assign skills = 'Java', 'Maven' -%}
@@ -78,12 +100,11 @@ lang: de-DE
                     github: 'https://github.com/LarsBodewig/JPath-Filter',
                     skills: skills
                 -%}
-                {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm', '*nix' -%}
+                {%- assign skills = 'TypeScript', 'HTML', 'CSS', 'npm' -%}
                 {%- include 'project',
-                    name: 'Web-Shell',
-                    subtitle: '- Eine im Browser simulierte Bash',
-                    description: 'Website mit Bash Look-and-Feel zur Simulation simpler *nix-Befehle.',
-                    github: 'https://github.com/LarsBodewig/Web-Shell',
+                    name: 'ShadowJs',
+                    description: 'Proof of Concept zur Isolation von JavaScript-Bibliotheken, die den globalen Scope manipulieren, in einem separaten Window-Kontext äquivalent zu Shadow DOM.',
+                    github: 'https://github.com/LarsBodewig/ShadowJs',
                     skills: skills
                 -%}
                 {%- assign skills = 'TypeScript', 'React', 'Redux', 'TSX', 'HTML', 'CSS', 'npm' -%}
