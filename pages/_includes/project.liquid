@@ -1,11 +1,11 @@
-{% comment %}
-    name: string;
-    subtitle?: string;
-    description: string;
-    github?: string;
-    maven?: string;
-    skills: string[];
-{% endcomment %}
+{% doc %}
+    @param {string} name
+    @param {string} [subtitle]
+    @param {string} description
+    @param {string} [github]
+    @param {string} [maven]
+    @param {object} skills - string[]
+{% enddoc %}
 
 <div class="project">
     <h2 class="project-name">{{ name }}</h2>

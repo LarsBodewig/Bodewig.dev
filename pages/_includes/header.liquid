@@ -1,13 +1,7 @@
-{% comment %}
-    languages: {
-        [string]: string;
-    };
-    this: {
-        id: string;
-        lang: string;
-        title: string;
-    };
-{% endcomment %}
+{% doc %}
+    @param {object} languages - { [string]: string; }
+    @param {object} this - { id: string; lang: string; title: string; }
+{% enddoc %}
 
 <header>
     {%- assign index = collections.all | where: 'data.id', 'index' | where: 'data.lang', colPage.data.lang | first -%}

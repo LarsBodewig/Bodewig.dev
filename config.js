@@ -21,7 +21,8 @@ export default {
     },
     liquid: {
         strictFilters: true,
-        strictVariables: true
+        strictVariables: true,
+        lenientIf: true
     },
     passthrough: [
         "assets"
