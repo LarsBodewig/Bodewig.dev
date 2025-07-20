@@ -5,6 +5,9 @@
     @param {string} [github]
     @param {string} [maven]
     @param {object} skills - string[]
+    @param {string} [since] - 2023-01-01
+    @param {string} [sinceUnit]
+    @param {object} this - { lang: string; }
 {% enddoc %}
 
 <div class="project">
@@ -12,7 +15,14 @@
     {%- if subtitle -%}
         <span class="project-subtitle"> {{ subtitle }}</span>
     {%- endif -%}
-    <p class="project-desc">{{ description }}</p>
+    <p class="project-desc">
+        {%- if since and sinceUnit -%}
+            <span data-experience="{{ since }}" data-experience-locale="{{ lang }}"></span>
+            {{ sinceUnit }}
+            &#32;
+        {%- endif -%}
+        {{ description }}
+    </p>
     <div class="project-links">
         {%- if github -%}
             <a
