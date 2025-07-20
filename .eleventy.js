@@ -1,5 +1,5 @@
 import prettierXml from "@prettier/plugin-xml";
-import { defaultOperators } from 'liquidjs';
+import { defaultOperators } from "liquidjs";
 import micromatch from "micromatch";
 import { format } from "prettier";
 import config from "./config.js";
@@ -24,25 +24,29 @@ export default function (eleventyConfig) {
         ...config.liquid,
         operators: {
             ...defaultOperators,
-            '+': (a, b) => a + b,
-            'mod': (a, b) => a % b,
-            'inCol': (elem, collection) =>
+            "+": (a, b) => a + b,
+            "mod": (a, b) => a % b,
+            "inCol": (elem, collection) =>
                 collection.some(item => item.url === elem.url),
-            'from': (elem, collection) =>
+            "from": (elem, collection) =>
                 collection.find(item => item.url === elem.url),
-            'in': (field, obj) => field in obj,
+            "in": (field, obj) => field in obj,
             ",": (a, b) => [
                 ...(Array.isArray(a) ? a : [a]),
                 ...(Array.isArray(b) ? b : [b])
-            ],
-        },
-        strictVariables: true,
-        lenientIf: true,
+            ]
+        }
     });
     config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
     if (config.favicon) {
-        eleventyConfig.addPassthroughCopy({ [config.favicon]: 'favicon.svg' });
+        eleventyConfig.addPassthroughCopy({ [config.favicon]: "favicon.svg" });
     }
+    eleventyConfig.addShortcode("debug", function (value) {
+        console.warn(value);
+        return "<!-- remove after test -->";
+    });
+    // liquidjs does not support doc tags, so we add them as a custom tag that does nothing
+    eleventyConfig.addPairedShortcode("doc", () => { });
     eleventyConfig.addFilter("asset", (file) => {
         const url = "/assets/" + file;
         const path = eleventyConfig.getFilter("url")(url);
@@ -78,7 +82,7 @@ export default function (eleventyConfig) {
         } else {
             l = l % 30 + 30;
         }
-        return "hsl(" + h + ',' + s + '%,' + l + '%)';
+        return "hsl(" + h + "," + s + "%," + l + "%)";
     });
     eleventyConfig.addFilter("hash", (value) => {
         let hash = 0;
@@ -104,7 +108,7 @@ export default function (eleventyConfig) {
     });
     eleventyConfig.addTransform("prettier", async (content, outputPath) => {
         // micromatch behaves weird about "./" thats why we remove it
-        const pathWithoutLeadingDot = outputPath.startsWith('.') ? outputPath.substring(1) : outputPath;
+        const pathWithoutLeadingDot = outputPath.startsWith(".") ? outputPath.substring(1) : outputPath;
         const isExcluded = micromatch.isMatch(pathWithoutLeadingDot, config.prettierExclude, { dot: true });
         if (isExcluded) {
             return content.trimStart(); // no transformation with prettier
