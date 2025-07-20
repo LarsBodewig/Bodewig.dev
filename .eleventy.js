@@ -1,8 +1,8 @@
-import config from "./config.js";
-import { format } from "prettier";
-import { defaultOperators } from 'liquidjs';
-import nanomatch from "nanomatch";
 import prettierXml from "@prettier/plugin-xml";
+import { defaultOperators } from 'liquidjs';
+import micromatch from "micromatch";
+import { format } from "prettier";
+import config from "./config.js";
 
 export default function (eleventyConfig) {
     Object.entries(config).forEach(([key, value]) =>
@@ -103,12 +103,13 @@ export default function (eleventyConfig) {
         return colCopy;
     });
     eleventyConfig.addTransform("prettier", async (content, outputPath) => {
-        const excluded = nanomatch(outputPath, config.prettierExclude);
-        if (excluded.length) { // empty if outputPath is not excluded
-            return content.trimStart();
+        // micromatch behaves weird about "./" thats why we remove it
+        const pathWithoutLeadingDot = outputPath.startsWith('.') ? outputPath.substring(1) : outputPath;
+        const isExcluded = micromatch.isMatch(pathWithoutLeadingDot, config.prettierExclude, { dot: true });
+        if (isExcluded) {
+            return content.trimStart(); // no transformation with prettier
         }
-        const text = content.trim(); // prettier fails on leading newline
-        return await format(text, {
+        return await format(content, {
             ...config.prettier,
             filepath: outputPath,
             plugins: [prettierXml]
