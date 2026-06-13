@@ -13,14 +13,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: (main) Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         ref: main
     - name: (main) Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version-file: 'package.json'
-        cache: 'npm'
     - name: (main) Install npm
       run: npm ci
     - name: (main) Run eleventy
@@ -28,12 +27,11 @@ jobs:
     - name: (main) Move build
       run: mv build ${{ runner.temp }}/build_main
     - name: (HEAD) Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
     - name: (HEAD) Setup Node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version-file: 'package.json'
-        cache: 'npm'
     - name: (HEAD) Install npm
       run: npm ci
     - name: (HEAD) Run eleventy
