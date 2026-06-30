@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: (main) Checkout repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
       with:
         ref: main
     - name: (main) Setup Node
@@ -27,7 +27,7 @@ jobs:
     - name: (main) Move build
       run: mv build ${{ runner.temp }}/build_main
     - name: (HEAD) Checkout repository
-      uses: actions/checkout@v6
+      uses: actions/checkout@v7
     - name: (HEAD) Setup Node
       uses: actions/setup-node@v6
       with:
