@@ -17,7 +17,7 @@ jobs:
       with:
         ref: main
     - name: (main) Setup Node
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version-file: 'package.json'
     - name: (main) Install npm
@@ -29,7 +29,7 @@ jobs:
     - name: (HEAD) Checkout repository
       uses: actions/checkout@v7
     - name: (HEAD) Setup Node
-      uses: actions/setup-node@v6
+      uses: actions/setup-node@v7
       with:
         node-version-file: 'package.json'
     - name: (HEAD) Install npm
