@@ -6,7 +6,8 @@ import config from "./config.js";
 
 export default function (eleventyConfig) {
     Object.entries(config).forEach(([key, value]) =>
-        eleventyConfig.addGlobalData(key, value));
+        eleventyConfig.addGlobalData(key, value),
+    );
 
     if (!config.server.suffixPaths) {
         const oldUrlFilter = eleventyConfig.getFilter("url");
@@ -25,19 +26,21 @@ export default function (eleventyConfig) {
         operators: {
             ...defaultOperators,
             "+": (a, b) => a + b,
-            "mod": (a, b) => a % b,
-            "inCol": (elem, collection) =>
-                collection.some(item => item.url === elem.url),
-            "from": (elem, collection) =>
-                collection.find(item => item.url === elem.url),
-            "in": (field, obj) => field in obj,
+            mod: (a, b) => a % b,
+            inCol: (elem, collection) =>
+                collection.some((item) => item.url === elem.url),
+            from: (elem, collection) =>
+                collection.find((item) => item.url === elem.url),
+            in: (field, obj) => field in obj,
             ",": (a, b) => [
                 ...(Array.isArray(a) ? a : [a]),
-                ...(Array.isArray(b) ? b : [b])
-            ]
-        }
+                ...(Array.isArray(b) ? b : [b]),
+            ],
+        },
     });
-    config.passthrough.forEach(rule => eleventyConfig.addPassthroughCopy(rule));
+    config.passthrough.forEach((rule) =>
+        eleventyConfig.addPassthroughCopy(rule),
+    );
     if (config.favicon) {
         eleventyConfig.addPassthroughCopy({ [config.favicon]: "favicon.svg" });
     }
@@ -46,7 +49,7 @@ export default function (eleventyConfig) {
         return "<!-- remove after test -->";
     });
     // liquidjs does not support doc tags, so we add them as a custom tag that does nothing
-    eleventyConfig.addPairedShortcode("doc", () => { });
+    eleventyConfig.addPairedShortcode("doc", () => {});
     eleventyConfig.addFilter("asset", (file) => {
         const url = "/assets/" + file;
         const path = eleventyConfig.getFilter("url")(url);
@@ -62,8 +65,9 @@ export default function (eleventyConfig) {
         return host + "/" + url;
     });
     eleventyConfig.addFilter("encode", (value) => {
-        const encoded = value.split("")
-            .map(c => c.charCodeAt(0).toString(16).padStart(2, "0"))
+        const encoded = value
+            .split("")
+            .map((c) => c.charCodeAt(0).toString(16).padStart(2, "0"))
             .join("");
         return encoded;
     });
@@ -78,9 +82,9 @@ export default function (eleventyConfig) {
         }
         h = h % 360;
         if (h > 40 && h < 200) {
-            l = l % 20 + 20;
+            l = (l % 20) + 20;
         } else {
-            l = l % 30 + 30;
+            l = (l % 30) + 30;
         }
         return "hsl(" + h + "," + s + "%," + l + "%)";
     });
@@ -107,18 +111,24 @@ export default function (eleventyConfig) {
         return colCopy;
     });
     eleventyConfig.addTransform("prettier", async (content, outputPath) => {
-        // micromatch behaves weird about "./" thats why we remove it
-        const pathWithoutLeadingDot = outputPath.startsWith(".") ? outputPath.substring(1) : outputPath;
-        const isExcluded = micromatch.isMatch(pathWithoutLeadingDot, config.prettierExclude, { dot: true });
+        // micromatch behaves weird about "./" that's why we remove it
+        const pathWithoutLeadingDot = outputPath.startsWith(".")
+            ? outputPath.substring(1)
+            : outputPath;
+        const isExcluded = micromatch.isMatch(
+            pathWithoutLeadingDot,
+            config.prettierExclude,
+            { dot: true },
+        );
         if (isExcluded) {
             return content.trimStart(); // no transformation with prettier
         }
         return await format(content, {
             ...config.prettier,
             filepath: outputPath,
-            plugins: [prettierXml]
+            plugins: [prettierXml],
         });
     });
 
     return config.eleventyConfig;
-};
+}
