@@ -5,5 +5,5 @@ of [11ty](https://www.11ty.dev/docs/) and [LiquidJS](https://liquidjs.com/) to p
 multi-language website.
 
 It is deployed on GitHub Pages using a custom GitHub Workflow.<br>
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/LarsBodewig/Bodewig.dev/pages.yml?branch=main&label=Currently%20live&logo=github)](https://github.com/LarsBodewig/Bodewig.dev/actions/workflows/pages.yml)<br>
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/LarsBodewig/Bodewig.dev/publish.yml?branch=main&label=Currently%20live&logo=github)](https://github.com/LarsBodewig/Bodewig.dev/actions/workflows/publish.yml)<br>
 You can check it out live on [Bodewig.dev](https://bodewig.dev/) !
