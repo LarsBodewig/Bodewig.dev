@@ -1,17 +1,19 @@
 {% doc %}
-    @param {object} address - { name: string; careOf?: string; street: string; city: string; email: string; }
+    @param {object} address - { name: string; careOf: string; street: string; city: string; email: string; contactForm: string; }
+    @param {string} formLabel
 {% enddoc %}
 
 <p>
     {{ address.name -}}
     <br>
-    {%- if address.careOf -%}
-        {{ address.careOf }}
-        <br>
-    {%- endif -%}
+    {{ address.careOf -}}
+    <br>
     {{ address.street -}}
     <br>
     {{ address.city -}}
-    <br>
+</p>
+<p>
     E-Mail: {% include 'email', email: address.email %}
+    <br>
+    <a href="{{ address.contactForm }}" class="link">{{ formLabel }}</a>
 </p>

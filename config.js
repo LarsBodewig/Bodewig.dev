@@ -1,10 +1,11 @@
 export default {
     address: {
         name: "Lars Bodewig",
-        careOf: "c/o Block Services",
-        street: "Stuttgarter Str. 106",
-        city: "70736 Fellbach",
+        careOf: "c/o Online-Impressum #9967",
+        street: "Europaring 90",
+        city: "53757 Sankt Augustin",
         email: "info@bodewig.dev",
+        contactForm: "https://mein.online-impressum.de/bodewig-dev/",
     },
     defaultLanguage: "de-DE",
     eleventyConfig: {
@@ -12,34 +13,30 @@ export default {
             input: "pages",
             output: "build",
         },
-        pathPrefix: "/"
+        pathPrefix: "/",
     },
     favicon: "assets/favicon.svg",
     languages: {
         "de-DE": "Deutsch",
-        "en-GB": "English"
+        "en-GB": "English",
     },
     liquid: {
         strictFilters: true,
         strictVariables: true,
-        lenientIf: true
+        lenientIf: true,
     },
-    passthrough: [
-        "assets"
-    ],
+    passthrough: ["assets"],
     prettier: {
         tabWidth: 4,
-        xmlWhitespaceSensitivity: "ignore"
+        xmlWhitespaceSensitivity: "ignore",
     },
-    prettierExclude: [
-        "**/*.txt"
-    ],
+    prettierExclude: ["**/*.txt"],
     server: {
         domain: "bodewig.dev",
         protocol: "https",
-        suffixPaths: true
+        suffixPaths: true,
     },
     site: {
-        title: "Bodewig.dev"
-    }
+        title: "Bodewig.dev",
+    },
 };
