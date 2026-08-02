@@ -1,40 +1,40 @@
-name: Diff builds on Pull Requests
+name: Diff
 
 on:
   pull_request:
     branches:
-    - main
+      - main
 
 permissions:
   contents: read
 
 jobs:
   diff:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
-    - name: (main) Checkout repository
-      uses: actions/checkout@v7
-      with:
-        ref: main
-    - name: (main) Setup Node
-      uses: actions/setup-node@v7
-      with:
-        node-version-file: 'package.json'
-    - name: (main) Install npm
-      run: npm ci
-    - name: (main) Run eleventy
-      run: npm run build
-    - name: (main) Move build
-      run: mv build ${{ runner.temp }}/build_main
-    - name: (HEAD) Checkout repository
-      uses: actions/checkout@v7
-    - name: (HEAD) Setup Node
-      uses: actions/setup-node@v7
-      with:
-        node-version-file: 'package.json'
-    - name: (HEAD) Install npm
-      run: npm ci
-    - name: (HEAD) Run eleventy
-      run: npm run build
-    - name: (HEAD) Compare builds
-      run: diff -r ${{ runner.temp }}/build_main build
+      - name: (main) Checkout repository
+        uses: actions/checkout@v7
+        with:
+          ref: main
+      - name: (main) Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: 'package.json'
+      - name: (main) Install npm
+        run: npm ci
+      - name: (main) Run eleventy
+        run: npm run build
+      - name: (main) Move build
+        run: mv build ${{ runner.temp }}/build_main
+      - name: (HEAD) Checkout repository
+        uses: actions/checkout@v7
+      - name: (HEAD) Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: 'package.json'
+      - name: (HEAD) Install npm
+        run: npm ci
+      - name: (HEAD) Run eleventy
+        run: npm run build
+      - name: (HEAD) Compare builds
+        run: diff -r ${{ runner.temp }}/build_main build
