@@ -5,7 +5,7 @@ export default {
         street: "Europaring 90",
         city: "53757 Sankt Augustin",
         email: "info@bodewig.dev",
-        contactForm: "https://mein.online-impressum.de/bodewig-dev/",
+        contactForm: "https://mein.online-impressum.de/bodewig-dev/#zweiterkontaktweg",
     },
     defaultLanguage: "de-DE",
     eleventyConfig: {
